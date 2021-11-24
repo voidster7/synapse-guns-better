@@ -1,6 +1,8 @@
 <template>
   <div id="navbar">
-    <h2 id="navbartext">{{ siteName }}</h2>
+    <h2 id="navbartext">
+      {{ siteName }}
+    </h2>
   </div>
 </template>
 <script>
@@ -22,6 +24,7 @@ export default {
 }
 #navbartext {
   margin-left: 1vw;
-  font-size: 1.5em;
+  font-size: 1.5vw;
 }
+
 </style>
