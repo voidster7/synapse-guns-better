@@ -9,7 +9,7 @@
 export default {
   name: "NavBar",
   props: {
-    siteName: String,
+    siteName: String
   },
 };
 </script>
@@ -17,13 +17,15 @@ export default {
 #navbar {
   background-color: #333;
   color: #fff;
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 100%;
+  width: calc(100% - 1vw);
+  padding-left: 1vw;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+
 }
+
 #navbartext {
-  margin-left: 1vw;
   font-size: 1.5vw;
 }
 

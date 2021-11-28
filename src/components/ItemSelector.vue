@@ -1,52 +1,67 @@
 <template>
-  <input
-    type="text"
-    id="search"
-    v-model="searchInput"
-    placeholder="Item Name"
-  />
-  <br />
-  <span>Search Results</span>
-  <div class="itemContainer">
-    <div v-for="item in filteredItems" :key="item.name" class="itemDiv">
-      <img class="itemImg" v-bind:src="item.img" alt="Not Found" onerror='this.src = "img/undefined.png"'>
-      <p class="itemName">{{ item.name }}</p>
+  <div id="ItemSelector">
+    <div class="flexCenter">
+      <input
+        type="text"
+        id="search"
+        v-model="searchInput"
+        placeholder="Search"
+      />
+    </div>
+    <div class="itemContainer">
+      <div v-for="(item, itemKey) in filteredItems" :key="item.name" class="itemDiv" @click="addItemToCraft(itemKey)">
+          <item :item="item"> </item>
+      </div>
+      <div v-for="(item, itemKey) in getItemsToCraft" :key="item.name" class="itemDiv">
+          <p>{{item + " " + itemKey}}</p>
+      </div>
     </div>
   </div>
 </template>
+
+
 <script>
+import Item from "./Item.vue";
+
 export default {
   name: "ItemSelector",
-  props: {
-    itemList: {
-      type: Array,
-      default: () => {
-        return [
-          { name: "Kriss Vector" },
-          { name: "Thompson" },
-          { name: "AK-47" },
-        ];
-      },
+  components: {
+    Item,
+  },
+  methods: {
+    addItemToCraft(item) {
+      this.$store.commit("changeItemAmount", {item: item, amount: 1})
+      console.log(this.$store.state.itemsToCraft);
     },
   },
+  props: {},
   data() {
     return {
       searchInput: "",
     };
   },
   computed: {
+    getItemsToCraft() {
+      return this.$store.state.itemsToCraft;
+
+    },
     filteredItems() {
       var search = this.searchInput.toLowerCase();
-      var itemList = this.itemList;
-      for(var k in itemList) {
-        if (!itemList[k].img) {
-          itemList[k].img = "img/undefined.png";
+      var itemList = this.$store.state.items;
+      for (var k in itemList) {
+        if (!itemList[k].image) {
+          itemList[k].image = "img/undefined.png";
         }
       }
       if (search) {
-        return itemList.filter(function (item) {
-          return item.name.toLowerCase().indexOf(search.toLowerCase()) > -1;
-        });
+        let itemsFound = {};
+        for (var i in itemList) {
+          let item = itemList[i];
+          if (item.name.toLowerCase().indexOf(search.toLowerCase()) > -1) {
+            itemsFound[i] = item;
+          }
+        }
+        return itemsFound;
       } else {
         return itemList;
       }
@@ -56,13 +71,23 @@ export default {
 </script>
 
 <style scoped>
+#ItemSelector {
+  margin-left: 30px;
+  margin-top: 30px;
+  width: 23vw;
+}
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+}
+
 #search {
-  margin-top: 5vw;
+  display: block;
   width: 15vw;
   height: 2vw;
-  border-radius: 0.5vw;
-  border: 0.1vw solid rgb(30, 255, 0);
-  background-color: rgb(71, 71, 71);
+  border: 4px solid #333;
+  background-color: #222;
   color: white;
   font-size: 1vw;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -75,27 +100,18 @@ export default {
 #search::placeholder {
   color: rgb(218, 218, 218);
 }
+
 .itemContainer {
   display: flex;
   flex-direction: column;
 }
+
 .itemDiv {
-  display: inline-block;
-  margin-top: 0.5vw;
-  width: 25vw;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  width: 100%;
   height: 6vw;
-  border: 0.1vw solid black;
-}
-.itemName {
-  position: relative;
-  left: 0.3vw;
-  top: 3.5vw;
-  font-size: 1vw;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-.itemImg {
-  width: 5vw;
-  height: 5vw;
-  border: 0.1vw solid black;
+  background: #333;
 }
 </style>
