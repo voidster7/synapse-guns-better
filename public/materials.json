@@ -77,6 +77,26 @@
         "image": "img/chem_benzilate.png",
         "type": "item"
     },
+    "WOOD_PLANK": {
+        "name": "Wood Plank",
+        "image": "img/plank_wood.png",
+        "type": "item"
+    },
+    "MAPLE_PLANK": {
+        "name": "Maple Plank",
+        "image": "img/plank_maple.png",
+        "type": "item"
+    },
+    "BIRCH_PLANK": {
+        "name": "Wood Plank",
+        "image": "img/plank_birch.png",
+        "type": "item"
+    },
+    "WILLOW_PLANK": {
+        "name": "Wood Plank",
+        "image": "img/plank_willow.png",
+        "type": "item"
+    },
     "PISTOL_PART": {
         "name": "Pistol Part",
         "image": "img/mat_pistolbarrel.png",
