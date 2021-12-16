@@ -76,5 +76,56 @@
         "name": "6-Hydroxyinl Benzilate",
         "image": "img/chem_benzilate.png",
         "type": "item"
+    },
+    "PISTOL_PART": {
+        "name": "Pistol Part",
+        "image": "img/mat_pistolbarrel.png",
+        "type": "weaponpart",
+        "materials": {
+            "COPPER_BAR": 2,
+            "IRON_BAR": 2,
+            "WOOD_PLANK": 2
+        }
+    },
+    "DAMAGED_RIFLE_PART": {
+        "name": "Damaged Rifle Receiver",
+        "image": "img/mat_damagedriflereceiver.png",
+        "type": "weaponpart",
+        "materials": {
+            "COPPER_BAR": 5,
+            "IRON_BAR": 5
+        }
+    },
+    "RIFLE_PART": {
+        "name": "Rifle Receiver",
+        "image": "img/mat_riflereceiver.png",
+        "type": "weaponpart",
+        "materials": {
+            "COPPER_BAR": 5,
+            "IRON_BAR": 5,
+            "STEEL_BAR": 2
+        }
+    },
+    "SHOTGUN_PART": {
+        "name": "Shotgun Parts",
+        "image": "img/mat_shotgunbarrel.png",
+        "type": "weaponpart",
+        "materials": {
+            "SILVER_BAR": 3,
+            "IRON_BAR": 1,
+            "MAPLE_PLANK": 3,
+            "STEEL_BAR": 1
+        }
+    },
+    "SNIPER_PART": {
+        "name": "Sniper Parts",
+        "image": "img/mat_sniperbarrel.png",
+        "type": "weaponpart",
+        "materials": {
+            "SILVER_BAR": 3,
+            "WILLOW_PLANK": 3,
+            "GOLD_BAR": 2,
+            "STEEL_BAR": 4
+        }
     }
 }
