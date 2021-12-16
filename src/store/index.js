@@ -3,6 +3,7 @@ import { createStore } from 'vuex'
 export default createStore({
   state: {
     items: {},
+    materials: {},
     itemsToCraft: {}
   },
   mutations: {
@@ -19,6 +20,10 @@ export default createStore({
     setItems(state, payload) {
        let items = payload;
        state.items = items;
+    },
+    setMaterials(state,payload) {
+      let materials = payload;
+      state.materials = materials;
     }
   },
   getters: {

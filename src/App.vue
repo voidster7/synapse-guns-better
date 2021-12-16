@@ -15,8 +15,10 @@ export default {
   },
   methods: {
     async fetchItems() {
-      let res = await axios.get("/items.json")
-      this.$store.commit("setItems", res.data);
+      let items = await axios.get("/items.json")
+      let materials = await axios.get("/materials.json")
+      this.$store.commit("setItems", items.data);
+      this.$store.commit("setMaterials", materials.data)
     },
   },
 };
