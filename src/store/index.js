@@ -51,6 +51,10 @@ export default createStore({
       } else {
         state.itemsToCraft[item] += amount;
       }
+    },
+    setItems(state, payload) {
+       let items = payload;
+       state.items = items;
     }
   },
   getters: {
