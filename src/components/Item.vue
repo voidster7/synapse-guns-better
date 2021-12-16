@@ -106,4 +106,13 @@ export default {
     rgba(214, 0, 255, 1) 100%
   );
 }
+
+.melee {
+  background: rgb(255, 0, 0);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 0, 0, 0.4) 0%,
+    rgba(255, 0, 0, 1) 100%
+  );
+}
 </style>

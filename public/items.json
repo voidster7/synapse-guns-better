@@ -1,61 +1,124 @@
 {
-    "kriss_vector": {
-        "name": "Kriss Vector",
-        "image": "img/weapon_cw_vector.png",
+    "makarov": {
+        "name": "Makarov",
+        "image": "img/weapon_cw_makarov.png",
         "legal": true,
-        "marketprice": 1000,
-        "itemType": "assaultrifle",
+        "marketprice": 500,
+        "itemType": "pistol",
         "materials": {
+            "COPPER_BAR": 8,
             "IRON_BAR": 5,
-            "COPPER_BAR": 5,
-            "STEEL_BAR": 5
+            "PISTOL_PART": 1
         }
     },
-    "thompson": {
-        "name": "Thompson",
-        "image": "img/weapon_cw_thompson.png",
+    "m1911": {
+        "name": "M1911",
+        "image": "img/weapon_cw_m1911.png",
         "legal": true,
-        "marketprice": 750,
-        "itemType": "assaultrifle",
+        "marketprice": 800,
+        "itemType": "pistol",
         "materials": {
-            "IRON_BAR": 9,
-            "COPPER_BAR": 3,
-            "STEEL_BAR": 2
+            "COPPER_BAR": 9,
+            "IRON_BAR": 6,
+            "PISTOL_PART": 1
         }
     },
-    "ak47": {
-        "name": "AK-47",
-        "image": "img/weapon_cw_ak74.png",
-        "legal": false,
-        "marketprice": 5600,
-        "itemType": "assaultrifle",
+    "p99": {
+        "name": "P99",
+        "image": "img/weapon_cw_p99.png",
+        "legal": true,
+        "marketprice": 800,
+        "itemType": "pistol",
         "materials": {
-            "IRON_BAR": 7,
-            "COPPER_BAR": 4,
-            "STEEL_BAR": 8
+            "COPPER_BAR": 8,
+            "IRON_BAR": 8,
+            "PISTOL_PART": 1
+        }
+    },
+    "fiveseven": {
+        "name": "FN Five-Seven",
+        "image": "img/weapon_cw_fiveseven.png",
+        "legal": true,
+        "marketprice": 800,
+        "itemType": "pistol",
+        "materials": {
+            "COPPER_BAR": 7,
+            "PISTOL_PART": 1,
+            "IRON_BAR": 9,
+            "STEEL_BAR": 2
         }
     },
     "mr96": {
         "name": "MR96",
         "image": "img/weapon_cw_357.png",
         "legal": true,
-        "marketprice": 3000,
+        "marketprice": 2000,
         "itemType": "pistol",
         "materials": {
-            "IRON_BAR": 1,
-            "COPPER_BAR": 6,
+            "COPPER_BAR": 8,
+            "PISTOL_PART": 1,
+            "IRON_BAR": 5,
+            "STEEL_BAR": 5
+        }
+    },
+    "mac11": {
+        "name": "Mac-11",
+        "image": "img/weapon_cw_mac11.png",
+        "legal": true,
+        "marketprice": 3500,
+        "itemType": "assaultrifle",
+        "materials": {
+            "COPPER_BAR": 9,
+            "IRON_BAR": 10,
+            "PISTOL_PART": 1
+        }
+    },
+    "hkmp5": {
+        "name": "HK MP5",
+        "image": "img/weapon_cw_mp5.png",
+        "legal": true,
+        "marketprice": 3500,
+        "itemType": "assaultrifle",
+        "materials": {
+            "COPPER_BAR": 10,
+            "PISTOL_PART": 1,
+            "IRON_BAR": 12,
             "STEEL_BAR": 2
         }
     },
-    "ksg12": {
-        "name": "KSG-12",
-        "image": "img/weapon_cw_tr09_ksg12.png",
-        "legal": false,
-        "marketprice": 3000,
-        "itemType": "shotgun",
+    "machete": {
+        "name": "Machete",
+        "image": "img/weapon_cw_ws_pamachete.png",
+        "legal": true,
+        "marketprice": 3500,
+        "itemType": "melee",
         "materials": {
-            "IRON_BAR": 8,
-            "COPPER_BAR": 3,
+            "COPPER_BAR": 8,
+            "IRON_BAR": 5
+        }
+    },
+    "hkump": {
+        "name": "H&K UMP .45",
+        "image": "img/weapon_cw_ump45.png",
+        "legal": true,
+        "marketprice": 3500,
+        "itemType": "assaultrifle",
+        "materials": {
+            "COPPER_BAR": 14,
+            "IRON_BAR": 16,
+            "PISTOL_PART": 1
+        }
+    },
+    "glock18": {
+        "name": "Glock 18",
+        "image": "img/weapon_cw_g18.png",
+        "legal": false,
+        "marketprice": 3500,
+        "itemType": "assaultrifle",
+        "materials": {
+            "COPPER_BAR": 8,
+            "PISTOL_PART": 1,
+            "IRON_BAR": 12,
             "STEEL_BAR": 6
         }
     }
