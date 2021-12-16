@@ -1,6 +1,9 @@
 <template>
   <NavBar siteName="Crafting Calculator"></NavBar>
   <ItemSelector></ItemSelector>
+  <footer>
+    <p>Website is in early development.</p>
+  </footer>
 </template>
 
 <script>
@@ -15,10 +18,10 @@ export default {
   },
   methods: {
     async fetchItems() {
-      let items = await axios.get("/items.json")
-      let materials = await axios.get("/materials.json")
+      let items = await axios.get("/items.json");
+      let materials = await axios.get("/materials.json");
       this.$store.commit("setItems", items.data);
-      this.$store.commit("setMaterials", materials.data)
+      this.$store.commit("setMaterials", materials.data);
     },
   },
 };
@@ -35,5 +38,13 @@ export default {
 }
 body {
   background-color: #111;
+}
+footer  {
+  position: fixed;
+  right: 50%;
+  transform: translate(50%, -50%);
+  top: 95%;
+  font-size: 2vw;
+  color: orange;
 }
 </style>
