@@ -1,37 +1,62 @@
 {
     "kriss_vector": {
-      "name": "Kriss Vector",
-      "image": "img/weapon_cw_vector.png",
-      "legal": true,
-      "marketprice": 1000,
-      "itemType": "assaultrifle"
+        "name": "Kriss Vector",
+        "image": "img/weapon_cw_vector.png",
+        "legal": true,
+        "marketprice": 1000,
+        "itemType": "assaultrifle",
+        "materials": {
+            "IRON_BAR": 5,
+            "COPPER_BAR": 5,
+            "STEEL_BAR": 5
+        }
     },
     "thompson": {
-      "name": "Thompson",
-      "image": "img/weapon_cw_thompson.png",
-      "legal": true,
-      "marketprice": 750,
-      "itemType": "assaultrifle"
+        "name": "Thompson",
+        "image": "img/weapon_cw_thompson.png",
+        "legal": true,
+        "marketprice": 750,
+        "itemType": "assaultrifle",
+        "materials": {
+            "IRON_BAR": 9,
+            "COPPER_BAR": 3,
+            "STEEL_BAR": 2
+        }
     },
     "ak47": {
-      "name": "AK-47",
-      "image": "img/weapon_cw_ak74.png",
-      "legal": false,
-      "marketprice": 5600,
-      "itemType": "assaultrifle"
+        "name": "AK-47",
+        "image": "img/weapon_cw_ak74.png",
+        "legal": false,
+        "marketprice": 5600,
+        "itemType": "assaultrifle",
+        "materials": {
+            "IRON_BAR": 7,
+            "COPPER_BAR": 4,
+            "STEEL_BAR": 8
+        }
     },
     "mr96": {
-      "name": "MR96",
-      "image": "img/weapon_cw_357.png",
-      "legal": true,
-      "marketprice": 3000,
-      "itemType": "pistol"
+        "name": "MR96",
+        "image": "img/weapon_cw_357.png",
+        "legal": true,
+        "marketprice": 3000,
+        "itemType": "pistol",
+        "materials": {
+            "IRON_BAR": 1,
+            "COPPER_BAR": 6,
+            "STEEL_BAR": 2
+        }
     },
     "ksg12": {
-      "name": "KSG-12",
-      "image": "img/weapon_cw_tr09_ksg12.png",
-      "legal": false,
-      "marketprice": 3000,
-      "itemType": "shotgun"
+        "name": "KSG-12",
+        "image": "img/weapon_cw_tr09_ksg12.png",
+        "legal": false,
+        "marketprice": 3000,
+        "itemType": "shotgun",
+        "materials": {
+            "IRON_BAR": 8,
+            "COPPER_BAR": 3,
+            "STEEL_BAR": 6
+        }
     }
 }
