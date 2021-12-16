@@ -114,12 +114,94 @@
         "image": "img/weapon_cw_g18.png",
         "legal": false,
         "marketprice": 3500,
-        "itemType": "assaultrifle",
+        "itemType": "pistol",
         "materials": {
             "COPPER_BAR": 8,
             "PISTOL_PART": 1,
             "IRON_BAR": 12,
             "STEEL_BAR": 6
+        }
+    },
+    "ak74": {
+        "name": "AK-74",
+        "image": "img/weapon_cw_ak74.png",
+        "legal": false,
+        "marketprice": 6000,
+        "itemType": "assaultrifle",
+        "materials": {
+            "COPPER_BAR": 11,
+            "DAMAGED_RIFLE_PART": 1,
+            "IRON_BAR": 11,
+            "STEEL_BAR": 1
+        }
+    },
+    "ar15": {
+        "name": "AR-15",
+        "image": "img/weapon_cw_ar15.png",
+        "legal": true,
+        "marketprice": 6500,
+        "itemType": "assaultrifle",
+        "materials": {
+            "COPPER_BAR": 11,
+            "DAMAGED_RIFLE_PART": 1,
+            "IRON_BAR": 11,
+            "STEEL_BAR": 3
+        }
+    },
+    "thompson": {
+        "name": "Thompson",
+        "image": "img/weapon_cw_ar15.png",
+        "legal": false,
+        "marketprice": 6500,
+        "itemType": "assaultrifle",
+        "materials": {
+            "COPPER_BAR": 15,
+            "PISTOL_PART": 1,
+            "IRON_BAR": 17,
+            "STEEL_BAR": 2
+        }
+    },
+    "glock17": {
+        "name": "Glock 17",
+        "image": "img/weapon_cw_g17.png",
+        "legal": true,
+        "marketprice": 6500,
+        "itemType": "assaultrifle",
+        "materials": {
+            "SILVER_BAR": 1,
+            "PISTOL_PART": 1,
+            "COPPER_BAR": 8,
+            "IRON_BAR": 8,
+            "GOLD_BAR": 2,
+            "STEEL_BAR": 3
+        }
+    },
+    "kriss_vector": {
+        "name": "Kriss Vector",
+        "image": "img/weapon_cw_vector.png",
+        "legal": false,
+        "marketprice": 10000,
+        "itemType": "assaultrifle",
+        "materials": {
+            "SILVER_BAR": 6,
+            "IRON_BAR": 12,
+            "PISTOL_PART": 1,
+            "GOLD_BAR": 6,
+            "STEEL_BAR": 9
+        }
+    },
+    "deagle": {
+        "name": "Desert Eagle",
+        "image": "img/weapon_cw_deagle.png",
+        "legal": true,
+        "marketprice": 6500,
+        "itemType": "pistol",
+        "materials": {
+            "PISTOL_PART": 1,
+            "COPPER_BAR": 8,
+            "IRON_BAR": 10,
+            "GOLD_BAR": 2,
+            "STEEL_BAR": 3
         }
     }
 }
