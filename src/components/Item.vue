@@ -1,25 +1,23 @@
 <template>
-
-    <img
-      v-bind:class="[item.itemType, 'itemImg']"
-      v-bind:src="item.image"
-      alt="Not Found"
-      onerror='this.src = "img/undefined.png"'
-      style="transform: scaleX(1)"
-    />
-    <div class="itemInfo">
-      <p class="itemName">{{ item.name }}</p>
-      <p class="itemMarketprice">{{ getFormattedMarketprice }}</p>
-      <p
-        v-bind:class="[
-          'itemLegality',
-          { itemLegal: item.legal, itemIllegal: !item.legal },
-        ]"
-      >
-        {{ item.legal ? "Legal" : "Illegal" }}
-      </p>
-    </div>
-
+  <img
+    v-bind:class="[item.itemType, 'itemImg']"
+    v-bind:src="item.image"
+    alt="Not Found"
+    onerror='this.src = "img/undefined.png"'
+    style="transform: scaleX(1)"
+  />
+  <div class="itemInfo">
+    <p class="itemName">{{ item.name }}</p>
+    <p class="itemMarketprice">{{ getFormattedMarketprice }}</p>
+    <p
+      v-bind:class="[
+        'itemLegality',
+        { itemLegal: item.legal, itemIllegal: !item.legal },
+      ]"
+    >
+      {{ item.legal ? "Legal" : "Illegal" }}
+    </p>
+  </div>
 </template>
 
 <script>
@@ -31,11 +29,15 @@ export default {
 
   computed: {
     getFormattedMarketprice() {
-      return new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "USD",
-        maximumFractionDigits: 0,
-      }).format(this.item.marketprice);
+      if (this.item.marketprice == 0) {
+        return "Unknown Value";
+      } else {
+        return new Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency: "USD",
+          maximumFractionDigits: 0,
+        }).format(this.item.marketprice);
+      }
     },
   },
 };
@@ -113,6 +115,15 @@ export default {
     135deg,
     rgba(255, 0, 0, 0.4) 0%,
     rgba(255, 0, 0, 1) 100%
+  );
+}
+
+.exotic {
+  background: rgb(238, 255, 0);
+  background: linear-gradient(
+    135deg,
+    rgba(238, 255, 0, 0.4) 0%,
+    rgba(238, 255, 0, 1) 100%
   );
 }
 </style>

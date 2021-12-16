@@ -341,5 +341,139 @@
             "IRON_BAR": 14,
             "STEEL_BAR": 16
         }
+    },
+    "m14": {
+        "name": "M14",
+        "image": "img/weapon_cw_m14.png",
+        "legal": false,
+        "marketprice": 22000,
+        "itemType": "assaultrifle",
+        "materials": {
+            "SILVER_BAR": 17,
+            "TITANIUM_BAR": 5,
+            "SNIPER_PART": 1,
+            "IRON_BAR": 14,
+            "GOLD_BAR": 6,
+            "STEEL_BAR": 13
+        }
+    },
+    "m3super": {
+        "name": "M3 Super 90",
+        "image": "img/weapon_cw_m3super90.png",
+        "legal": false,
+        "marketprice": 12000,
+        "itemType": "shotgun",
+        "materials": {
+            "SILVER_BAR": 7,
+            "IRON_BAR": 15,
+            "SHOTGUN_PART": 1,
+            "GOLD_BAR": 8,
+            "STEEL_BAR": 6
+        }
+    },
+    "m4": {
+        "name": "M4 Carbine",
+        "image": "img/weapon_cw_m4a1.png",
+        "legal": false,
+        "marketprice": 16000,
+        "itemType": "assaultrifle",
+        "materials": {
+            "SILVER_BAR": 8,
+            "TITANIUM_BAR": 1,
+            "IRON_BAR": 11,
+            "COPPER_BAR": 10,
+            "RIFLE_PART": 1,
+            "GOLD_BAR": 11,
+            "STEEL_BAR": 10
+        }
+    },
+    "galil": {
+        "name": "IMI Galil",
+        "image": "img/weapon_cw_galil.png",
+        "legal": false,
+        "marketprice": 14000,
+        "itemType": "assaultrifle",
+        "materials": {
+            "SILVER_BAR": 8,
+            "TITANIUM_BAR": 1,
+            "IRON_BAR": 14,
+            "RIFLE_PART": 1,
+            "STEEL_BAR": 9
+        }
+    },
+    "acr": {
+        "name": "ACR-E",
+        "image": "img/weapon_cw_acr.png",
+        "legal": false,
+        "marketprice": 17000,
+        "itemType": "assaultrifle",
+        "materials": {
+            "TITANIUM_BAR": 2,
+            "IRON_BAR": 13,
+            "COPPER_BAR": 12,
+            "RIFLE_PART": 1,
+            "GOLD_BAR": 10,
+            "STEEL_BAR": 10
+        }
+    },
+    "ckgas": {
+        "name": "CK Gas Grenade",
+        "image": "img/weapon_cw_gasnade.png",
+        "legal": false,
+        "marketprice": 0,
+        "itemType": "exotic",
+        "materials": {
+            "COPPER_BAR": 10,
+            "HYDROXYNIL_BENZILATE": 1,
+            "IRON_BAR": 10,
+            "STEEL_BAR": 7
+        }
+    },
+    "ksg": {
+        "name": "KSG-12 Shotgun",
+        "image": "img/weapon_cw_tr09_ksg12.png",
+        "legal": false,
+        "marketprice": 18000,
+        "itemType": "shotgun",
+        "materials": {
+            "SILVER_BAR": 7,
+            "TITANIUM_BAR": 5,
+            "IRON_BAR": 17,
+            "SHOTGUN_PART": 1,
+            "GOLD_BAR": 8,
+            "STEEL_BAR": 13
+        }
+    },
+    "aug": {
+        "name": "AUG A3",
+        "image": "img/weapon_cw_aug.png",
+        "legal": false,
+        "marketprice": 22000,
+        "itemType": "assaultrifle",
+        "materials": {
+            "SILVER_BAR": 8,
+            "TITANIUM_BAR": 4,
+            "IRON_BAR": 11,
+            "COPPER_BAR": 12,
+            "RIFLE_PART": 1,
+            "GOLD_BAR": 13,
+            "STEEL_BAR": 14
+        }
+    },
+    "xm8": {
+        "name": "XM8",
+        "image": "img/weapon_cw_kkxm8.png",
+        "legal": false,
+        "marketprice": 24000,
+        "itemType": "assaultrifle",
+        "materials": {
+            "SILVER_BAR": 20,
+            "TITANIUM_BAR": 7,
+            "IRON_BAR": 6,
+            "COPPER_BAR": 6,
+            "RIFLE_PART": 1,
+            "GOLD_BAR": 13,
+            "STEEL_BAR": 14
+        }
     }
 }

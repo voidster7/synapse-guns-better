@@ -71,5 +71,10 @@
         "name": "Titanium Ore",
         "image": "img/mat_titanium.png",
         "type": "ore"
+    },
+    "HYDROXYNIL_BENZILATE": {
+        "name": "6-Hydroxyinl Benzilate",
+        "image": "img/chem_benzilate.png",
+        "type": "item"
     }
 }
