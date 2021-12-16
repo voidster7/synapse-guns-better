@@ -1,0 +1,26 @@
+{
+    "IRON_BAR": {
+        "name": "Iron Bar",
+        "image": "img/iron_bar.png",
+        "type": "orebar",
+        "materials": {
+            "IRON_ORE": 2
+        }
+    },
+    "COPPER_BAR": {
+        "name": "Copper Bar",
+        "image": "img/copper_bar.png",
+        "type": "orebar",
+        "materials": {
+            "COPPER_ORE": 2
+        }
+    },
+    "STEEL_BAR": {
+        "name": "Steel Bar",
+        "image": "img/steel_bar.png",
+        "type": "barbar",
+        "materials": {
+            "IRON_BAR": 2
+        }
+    }
+}
