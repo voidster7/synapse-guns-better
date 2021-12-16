@@ -1,26 +1,75 @@
 {
-    "IRON_BAR": {
-        "name": "Iron Bar",
-        "image": "img/iron_bar.png",
-        "type": "orebar",
-        "materials": {
-            "IRON_ORE": 2
-        }
-    },
     "COPPER_BAR": {
         "name": "Copper Bar",
-        "image": "img/copper_bar.png",
+        "image": "img/mat_metal.png",
         "type": "orebar",
         "materials": {
             "COPPER_ORE": 2
         }
     },
+    "IRON_BAR": {
+        "name": "Iron Bar",
+        "image": "img/mat_metal_iron.png",
+        "type": "orebar",
+        "materials": {
+            "IRON_ORE": 2
+        }
+    },
     "STEEL_BAR": {
         "name": "Steel Bar",
-        "image": "img/steel_bar.png",
+        "image": "img/mat_metal_steel.png",
         "type": "barbar",
         "materials": {
             "IRON_BAR": 2
         }
+    },
+    "SILVER_BAR": {
+        "name": "Silver Bar",
+        "image": "img/mat_metal_silver.png",
+        "type": "barbar",
+        "materials": {
+            "SILVER_ORE": 2
+        }
+    },
+    "GOLD_BAR": {
+        "name": "Gold Bar",
+        "image": "img/mat_metal_gold.png",
+        "type": "barbar",
+        "materials": {
+            "GOLD_ORE": 2
+        }
+    },
+    "TITANIUM_BAR": {
+        "name": "Titanium Bar",
+        "image": "img/mat_metal_titanium.png",
+        "type": "barbar",
+        "materials": {
+            "TITANIUM_ORE": 2
+        }
+    },
+    "COPPER_ORE": {
+        "name": "Copper Ore",
+        "image": "img/mat_copper.png",
+        "type": "ore"
+    },
+    "IRON_ORE": {
+        "name": "Iron Ore",
+        "image": "img/mat_iron.png",
+        "type": "ore"
+    },
+    "SILVER_ORE": {
+        "name": "Silver Ore",
+        "image": "img/mat_silver.png",
+        "type": "ore"
+    },
+    "GOLD_ORE": {
+        "name": "Gold Ore",
+        "image": "img/mat_gold.png",
+        "type": "ore"
+    },
+    "TITANIUM_ORE": {
+        "name": "Titanium Ore",
+        "image": "img/mat_titanium.png",
+        "type": "ore"
     }
 }
