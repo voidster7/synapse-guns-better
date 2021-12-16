@@ -113,7 +113,7 @@
         "name": "Glock 18",
         "image": "img/weapon_cw_g18.png",
         "legal": false,
-        "marketprice": 3500,
+        "marketprice": 9000,
         "itemType": "pistol",
         "materials": {
             "COPPER_BAR": 8,
