@@ -166,7 +166,7 @@
         "image": "img/weapon_cw_g17.png",
         "legal": true,
         "marketprice": 6500,
-        "itemType": "assaultrifle",
+        "itemType": "pistol",
         "materials": {
             "SILVER_BAR": 1,
             "PISTOL_PART": 1,
