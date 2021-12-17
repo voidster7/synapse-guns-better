@@ -150,7 +150,7 @@
     },
     "thompson": {
         "name": "Thompson",
-        "image": "img/weapon_cw_ar15.png",
+        "image": "img/weapon_cw_thompson.png",
         "legal": false,
         "marketprice": 6500,
         "itemType": "assaultrifle",
