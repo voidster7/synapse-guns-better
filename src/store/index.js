@@ -17,10 +17,10 @@ export default createStore({
       }
     },
     setItems(state, payload) {
-       let items = payload;
-       state.items = items;
+      let items = payload;
+      state.items = items;
     },
-    setMaterials(state,payload) {
+    setMaterials(state, payload) {
       let materials = payload;
       state.materials = materials;
     }
@@ -28,9 +28,12 @@ export default createStore({
   getters: {
     getItem: (state) => (item) => {
       let rItem = state.items[item];
+      if (!rItem) rItem = state.materials[item];
+      if (!rItem) return null;
       rItem.identifier = item;
       return rItem;
-    }
+    },
+
   },
   actions: {
   },
