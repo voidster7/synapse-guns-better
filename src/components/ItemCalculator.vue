@@ -35,7 +35,7 @@ export default {
       for (let rItem in inMaterials) {
         let item = inMaterials[rItem];
         let itemMaterials = item.materials;
-        if (!itemMaterials) return; // check if the item has materials
+        if (!itemMaterials) break; // check if the item has materials
         for (let mat in itemMaterials) {
           // loop through all the materials of the item
           let materialName = mat;
@@ -51,24 +51,19 @@ export default {
         }
       }
       let shouldRecurse = false;
-      console.log(shouldRecurse)
       for (let mat in stepMaterials) {
         // loop through all the materials of the step
         let material = stepMaterials[mat];
         if (material.materials) {
           shouldRecurse = true;
-          console.log("Do recurse");
         }
       }
-      console.log(shouldRecurse)
       steps.push(stepMaterials);
-      console.log(stepMaterials);
       if (shouldRecurse) {
         this.getMaterials(stepMaterials, steps);
-        console.log("has recursed");
       } else {
         console.log("has finished");
-        console.log(steps);
+        console.log(steps)
         return steps;
       }
     },
