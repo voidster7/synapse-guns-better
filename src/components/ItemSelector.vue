@@ -109,5 +109,6 @@ export default {
   width: 100%;
   height: 6vw;
   background: #333;
+  cursor: pointer;
 }
 </style>
