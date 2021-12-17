@@ -41,22 +41,24 @@ export default {
     },
     getTotalMaterials() {
       let materials = {};
+      // for each item that has been added to the crafting list
       for (let rItem in this.getItemsToCraft) {
         let item = this.getItemsToCraft[rItem];
         let itemMaterials = item.materials;
-        if (!itemMaterials) return;
+        if (!itemMaterials) return; // check if the item has materials
         for (let mat in itemMaterials) {
+          // loop through all the materials of the item
           let materialName = mat;
           let materialAmount = itemMaterials[mat] * item.amount;
-          let material = this.$store.getters.getItem(materialName);
+          let material = this.$store.getters.getItem(materialName); // fetch the full material item object
           console.log(material);
           if (!materials[materialName]) {
+            // check if the material has already been added to the total, and if not add it
             material.amount = materialAmount;
             materials[materialName] = material;
           } else {
-            materials[materialName].amount += materialAmount;
+            materials[materialName].amount += materialAmount; // increase the amount of the material if it is already in the list
           }
-          //this.$store.commit("addItemToCraft", material);
         }
       }
       return materials;
