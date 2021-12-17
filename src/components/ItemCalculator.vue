@@ -2,13 +2,15 @@
   <div id="ItemCalculator">
     <div v-for="item in getItemsToCraft" :key="item.name" class="itemDiv">
       <img
-    v-bind:class="[item.itemType, 'itemImg']"
-    v-bind:src="item.image"
-    alt="Not Found"
-    onerror='this.src = "img/undefined.png"'
-    style="transform: scaleX(1)"
-  />
-  
+        v-bind:class="[item.itemType, 'itemImg']"
+        v-bind:src="item.image"
+        alt="Not Found"
+        onerror='this.src = "img/undefined.png"'
+        style="transform: scaleX(1)"
+      />
+      <div class="itemInfo">
+        <p class="itemName">{{ item.name }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -33,27 +35,6 @@ export default {
       console.log(items);
       return items;
     },
-    // filteredItems() {
-    //   var search = this.searchInput.toLowerCase();
-    //   var itemList = this.$store.state.items;
-    //   for (var k in itemList) {
-    //     if (!itemList[k].image) {
-    //       itemList[k].image = "img/undefined.png";
-    //     }
-    //   }
-    //   if (search) {
-    //     let itemsFound = {};
-    //     for (var i in itemList) {
-    //       let item = itemList[i];
-    //       if (item.name.toLowerCase().indexOf(search.toLowerCase()) > -1) {
-    //         itemsFound[i] = item;
-    //       }
-    //     }
-    //     return itemsFound;
-    //   } else {
-    //     return itemList;
-    //   }
-    // },
   },
 };
 </script>
@@ -69,7 +50,23 @@ export default {
   display: flex;
   justify-content: center;
 }
+.itemInfo {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 5px 5px 0;
+  width: calc(100% - 5px);
+  height: calc(100% - 10px);
+  background: #222;
+  border-radius: 3px;
+}
 
+.itemName {
+  display: inline;
+  font-size: 1vw;
+  margin-bottom: 0.3vh;
+  margin-top: 1vh;
+  margin-left: 0.3vw;
+}
 .itemContainer {
   display: flex;
   flex-direction: column;
