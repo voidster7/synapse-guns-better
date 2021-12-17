@@ -1,6 +1,9 @@
 <template>
   <NavBar siteName="Crafting Calculator"></NavBar>
-  <ItemSelector></ItemSelector>
+  <div id="parent">
+    <ItemSelector></ItemSelector>
+    <ItemCalculator></ItemCalculator>
+  </div>
   <footer>
     <p>Website is in early development.</p>
   </footer>
@@ -9,12 +12,14 @@
 <script>
 import NavBar from "./components/NavBar.vue";
 import ItemSelector from "./components/ItemSelector.vue";
+import ItemCalculator from "./components/ItemCalculator.vue";
 import axios from "axios";
 export default {
   name: "App",
   components: {
     NavBar,
     ItemSelector,
+    ItemCalculator,
   },
   methods: {
     async fetchItems() {
@@ -32,6 +37,13 @@ export default {
   margin: 0;
   padding: 0;
 }
+#parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+}
 #app {
   font-family: "Montserrat", sans-serif;
   color: white;
@@ -39,7 +51,7 @@ export default {
 body {
   background-color: #111;
 }
-footer  {
+footer {
   position: fixed;
   right: 50%;
   transform: translate(50%, -50%);

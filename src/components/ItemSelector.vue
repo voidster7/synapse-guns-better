@@ -12,9 +12,6 @@
       <div v-for="(item, itemKey) in filteredItems" :key="item.name" class="itemDiv" @click="addItemToCraft(itemKey)">
           <item :item="item"> </item>
       </div>
-      <div v-for="(item, itemKey) in getItemsToCraft" :key="item.name" class="itemDiv">
-          <p>{{item + " " + itemKey}}</p>
-      </div>
     </div>
   </div>
 </template>
