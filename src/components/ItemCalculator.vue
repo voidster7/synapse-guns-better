@@ -14,7 +14,15 @@
         <p class="itemAmount">{{ item.amount }}</p>
       </div>
     </div>
-
+    {{ getTotalMaterials }}
+    <div v-for="step in steps" :key="step.name" class="stepDiv">
+      <div class="itemInfo">
+        <p class="itemName">Step: {{ step.id + 1 }}</p>
+        <div v-for="material in step.materials" :key="material.identifier">
+          <p>{{material.name}} - {{material.amount}}</p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -67,6 +75,7 @@ export default {
       if (shouldRecurse) {
         this.calculateMaterials(stepMaterials, steps);
       } else {
+        this.$store.state.steps = steps;
         return steps;
       }
     },
@@ -109,7 +118,14 @@ export default {
       return materials;
     },
     getTotalMaterials() {
-      return this.calculateMaterials();
+      let a = this.calculateMaterials()
+      let b;
+      b = a;
+      a = b;
+      return "";
+    },
+    steps() {
+      return this.$store.state.steps;
     },
   },
 };
@@ -162,6 +178,14 @@ export default {
   margin-top: 5px;
   width: 100%;
   height: 6vw;
+  background: #333;
+}
+.stepDiv {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  width: 100%;
+  min-height: 6vw;
   background: #333;
 }
 

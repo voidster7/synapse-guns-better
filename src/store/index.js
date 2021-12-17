@@ -4,7 +4,8 @@ export default createStore({
   state: {
     items: {},
     materials: {},
-    itemsToCraft: {}
+    itemsToCraft: {},
+    steps: []
   },
   mutations: {
     changeItemAmount(state, payload) {
