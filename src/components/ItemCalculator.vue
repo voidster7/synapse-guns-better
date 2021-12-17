@@ -14,9 +14,10 @@
         <p class="itemAmount">{{ item.amount }}</p>
       </div>
     </div>
-    <p v-for="material in getTotalMaterials" :key="material.name">
-      {{ material.name }}: {{ material.amount }}
-    </p>
+
+    <div v-for="step in calculateMaterials()" :key="step.id">
+      <p>{{ JSON.stringify(step) }}</p>
+    </div>
   </div>
 </template>
 
@@ -26,21 +27,28 @@ export default {
   name: "ItemCalculator",
   components: {},
   methods: {
-    getMaterials(inMaterials, insteps) {
+    calculateMaterials(inMaterials, insteps) {
       let steps = insteps;
       if (!steps) steps = [];
       if (!inMaterials) inMaterials = this.getItemsToCraft;
       let stepMaterials = {};
-      //let materials = {}
       for (let rItem in inMaterials) {
         let item = inMaterials[rItem];
-        let itemMaterials = item.materials;
+        let TitemMaterials = item.materials;
+        let itemMaterials = {};
+        for (let test in TitemMaterials) {
+          itemMaterials[test] = TitemMaterials[test];
+        }
         if (!itemMaterials) break; // check if the item has materials
         for (let mat in itemMaterials) {
           // loop through all the materials of the item
           let materialName = mat;
           let materialAmount = itemMaterials[mat] * item.amount;
-          let material = this.$store.getters.getItem(materialName); // fetch the full material item object
+          let Tmaterial = new this.$store.getters.getItem(materialName); // fetch the full material item object
+          let material = {};
+          for (let test in Tmaterial) {
+            material[test] = Tmaterial[test];
+          }
           if (!stepMaterials[materialName]) {
             // check if the material has already been added to the total, and if not add it
             material.amount = materialAmount;
@@ -58,12 +66,10 @@ export default {
           shouldRecurse = true;
         }
       }
-      steps.push(stepMaterials);
+      steps.push({ materials: stepMaterials, id: steps.length });
       if (shouldRecurse) {
-        this.getMaterials(stepMaterials, steps);
+        this.calculateMaterials(stepMaterials, steps);
       } else {
-        console.log("has finished");
-        console.log(steps)
         return steps;
       }
     },
@@ -106,8 +112,7 @@ export default {
       return materials;
     },
     getTotalMaterials() {
-      let materials = this.getMaterials();
-      return materials;
+      return this.calculateMaterials();
     },
   },
 };
