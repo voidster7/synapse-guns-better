@@ -32,8 +32,7 @@ export default createStore({
       if (!rItem) return null;
       rItem.identifier = item;
       return rItem;
-    },
-
+    }
   },
   actions: {
   },

@@ -14,6 +14,9 @@
         <p class="itemAmount">{{ item.amount }}</p>
       </div>
     </div>
+    <p v-for="material in getTotalMaterials" :key="material.name">
+      {{ material.name }}: {{ material.amount }}
+    </p>
   </div>
 </template>
 
@@ -35,6 +38,28 @@ export default {
         items.push(item);
       }
       return items;
+    },
+    getTotalMaterials() {
+      let materials = {};
+      for (let rItem in this.getItemsToCraft) {
+        let item = this.getItemsToCraft[rItem];
+        let itemMaterials = item.materials;
+        if (!itemMaterials) return;
+        for (let mat in itemMaterials) {
+          let materialName = mat;
+          let materialAmount = itemMaterials[mat] * item.amount;
+          let material = this.$store.getters.getItem(materialName);
+          console.log(material);
+          if (!materials[materialName]) {
+            material.amount = materialAmount;
+            materials[materialName] = material;
+          } else {
+            materials[materialName].amount += materialAmount;
+          }
+          //this.$store.commit("addItemToCraft", material);
+        }
+      }
+      return materials;
     },
   },
 };
