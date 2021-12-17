@@ -28,7 +28,6 @@ export default {
   methods: {
     addItemToCraft(item) {
       this.$store.commit("changeItemAmount", {item: item, amount: 1})
-      console.log(this.$store.state.itemsToCraft);
     },
   },
   props: {},

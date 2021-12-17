@@ -10,6 +10,7 @@
       />
       <div class="itemInfo">
         <p class="itemName">{{ item.name }}</p>
+        <p class="itemAmount">{{ item.amount }}</p>
       </div>
     </div>
   </div>
@@ -71,7 +72,15 @@ export default {
   display: flex;
   flex-direction: column;
 }
-
+.itemAmount {
+  display: inline;
+  background-color: blue;
+  width: 1vw;
+  text-align: center;
+  border-radius: 0.5vw;
+  height: 1vw;
+  padding: 0.5vw;
+}
 .itemDiv {
   display: flex;
   align-items: center;

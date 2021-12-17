@@ -10,10 +10,9 @@ export default createStore({
     changeItemAmount(state, payload) {
       let item = payload.item;
       let amount = payload.amount;
-      console.log(item + " " + toString(amount));
       if (!state.itemsToCraft[item]) {
         state.itemsToCraft[item] = amount
-      } else {
+      } else if (state.itemsToCraft[item] + amount < 100) {
         state.itemsToCraft[item] += amount;
       }
     },
