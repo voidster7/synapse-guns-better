@@ -64,7 +64,7 @@
     "mac11": {
         "name": "Mac-11",
         "image": "img/weapon_cw_mac11.png",
-        "legal": true,
+        "legal": false,
         "marketprice": 3500,
         "itemType": "assaultrifle",
         "materials": {
@@ -76,7 +76,7 @@
     "hkmp5": {
         "name": "HK MP5",
         "image": "img/weapon_cw_mp5.png",
-        "legal": true,
+        "legal": false,
         "marketprice": 3500,
         "itemType": "assaultrifle",
         "materials": {
@@ -100,7 +100,7 @@
     "hkump": {
         "name": "H&K UMP .45",
         "image": "img/weapon_cw_ump45.png",
-        "legal": true,
+        "legal": false,
         "marketprice": 3500,
         "itemType": "assaultrifle",
         "materials": {
