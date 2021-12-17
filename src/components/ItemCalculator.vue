@@ -15,9 +15,6 @@
       </div>
     </div>
 
-    <div v-for="step in calculateMaterials()" :key="step.id">
-      <p>{{ JSON.stringify(step) }}</p>
-    </div>
   </div>
 </template>
 
