@@ -82,48 +82,4 @@ export default {
   color: green;
 }
 
-.assaultrifle {
-  background: rgb(255, 154, 0);
-  background: linear-gradient(
-    135deg,
-    rgba(255, 154, 0, 0.4) 0%,
-    rgba(255, 154, 0, 1) 100%
-  );
-}
-
-.pistol {
-  background: rgb(0, 99, 255);
-  background: linear-gradient(
-    135deg,
-    rgba(0, 99, 255, 0.4) 0%,
-    rgba(0, 99, 255, 1) 100%
-  );
-}
-
-.shotgun {
-  background: rgb(214, 0, 255);
-  background: linear-gradient(
-    135deg,
-    rgba(214, 0, 255, 0.4) 0%,
-    rgba(214, 0, 255, 1) 100%
-  );
-}
-
-.melee {
-  background: rgb(255, 0, 0);
-  background: linear-gradient(
-    135deg,
-    rgba(255, 0, 0, 0.4) 0%,
-    rgba(255, 0, 0, 1) 100%
-  );
-}
-
-.exotic {
-  background: rgb(238, 255, 0);
-  background: linear-gradient(
-    135deg,
-    rgba(238, 255, 0, 0.4) 0%,
-    rgba(238, 255, 0, 1) 100%
-  );
-}
 </style>

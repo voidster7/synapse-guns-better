@@ -27,6 +27,11 @@ export default createStore({
     }
   },
   getters: {
+    getItem: (state) => (item) => {
+      let rItem = state.items[item];
+      rItem.identifier = item;
+      return rItem;
+    }
   },
   actions: {
   },

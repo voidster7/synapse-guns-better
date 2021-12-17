@@ -1,8 +1,15 @@
 <template>
   <div id="ItemCalculator">
-    <div v-for="(item, itemKey) in getItemsToCraft" :key="item.name" class="itemDiv">
-          <p>{{item + " " + itemKey}}</p>
-      </div>
+    <div v-for="item in getItemsToCraft" :key="item.name" class="itemDiv">
+      <img
+    v-bind:class="[item.itemType, 'itemImg']"
+    v-bind:src="item.image"
+    alt="Not Found"
+    onerror='this.src = "img/undefined.png"'
+    style="transform: scaleX(1)"
+  />
+  
+    </div>
   </div>
 </template>
 
@@ -10,18 +17,21 @@
 <script>
 export default {
   name: "ItemCalculator",
-  components: {
-  },
-  methods: {
-
-  },
+  components: {},
+  methods: {},
   props: {},
-  data() {
-  },
+  data() {},
   computed: {
     getItemsToCraft() {
-      return this.$store.state.itemsToCraft;
-
+      let items = [];
+      for (let k in this.$store.state.itemsToCraft) {
+        let amount = this.$store.state.itemsToCraft[k];
+        let item = this.$store.getters.getItem(k);
+        item.amount = amount;
+        items.push(item);
+      }
+      console.log(items);
+      return items;
     },
     // filteredItems() {
     //   var search = this.searchInput.toLowerCase();
@@ -60,25 +70,6 @@ export default {
   justify-content: center;
 }
 
-#search {
-  display: block;
-  width: 15vw;
-  height: 2vw;
-  border: 4px solid #333;
-  background-color: #222;
-  color: white;
-  font-size: 1vw;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
-  transition-duration: 333ms;
-}
-#search:focus {
-  width: 16vw;
-}
-#search::placeholder {
-  color: rgb(218, 218, 218);
-}
-
 .itemContainer {
   display: flex;
   flex-direction: column;
@@ -91,5 +82,12 @@ export default {
   width: 100%;
   height: 6vw;
   background: #333;
+}
+
+.itemImg {
+  display: inline;
+  margin: 5px 5px 5px 5px;
+  height: calc(100% - 10px);
+  border-radius: 3px;
 }
 </style>
