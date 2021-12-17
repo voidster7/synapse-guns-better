@@ -1,5 +1,6 @@
 <template>
   <div id="ItemCalculator">
+    <h1>Items to craft</h1>
     <div v-for="item in getItemsToCraft" :key="item.name" class="itemDiv">
       <img
         v-bind:class="[item.itemType, 'itemImg']"
