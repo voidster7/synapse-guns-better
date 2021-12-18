@@ -1,6 +1,7 @@
 <template>
   <div id="menu">
     <h1>Settings</h1>
+    <h3>Hey yeah, sorry to disappoint you, but there's nothing here so far. Go suggest something we could add :)</h3>
   </div>
 </template>
 <script>
@@ -24,6 +25,11 @@ export default {
 }
 
 #menu > h1 {
+    text-align: center;
+    margin-bottom: 2vw;
+}
+
+#menu > h3 {
     text-align: center;
 }
 </style>
