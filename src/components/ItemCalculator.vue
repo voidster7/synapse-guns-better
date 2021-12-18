@@ -1,7 +1,7 @@
 <template>
   <div id="ItemCalculator">
     <h1>Items to craft</h1>
-    <div v-for="item in getItemsToCraft" :key="item.name" class="itemDiv">
+    <div v-for="item in getItemsToCraft" :key="item.name" class="itemDiv" @click="removeItemFromCraft(item.identifier)">
       <img
         v-bind:class="[item.itemType, 'itemImg']"
         v-bind:src="item.image"
@@ -105,6 +105,9 @@ export default {
           maximumFractionDigits: 0,
         }).format(item.marketprice * item.amount);
       }
+    },
+    removeItemFromCraft(item) {
+      this.$store.commit("changeItemAmount", {item: item, amount: -1})
     },
   },
   props: {},
@@ -220,6 +223,7 @@ export default {
   width: 100%;
   height: 6vw;
   background: #333;
+  cursor: pointer;
 }
 .stepDiv {
   display: flex;

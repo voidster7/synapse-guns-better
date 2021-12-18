@@ -17,6 +17,9 @@ export default createStore({
       } else if (state.itemsToCraft[item] + amount < 100) {
         state.itemsToCraft[item] += amount;
       }
+      if (state.itemsToCraft[item] <= 0) {
+        delete state.itemsToCraft[item]
+      }
     },
     setItems(state, payload) {
       let items = payload;
