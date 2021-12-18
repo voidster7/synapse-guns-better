@@ -16,7 +16,9 @@
     </div>
     {{ getTotalMaterials }}
     <p>Total (should be accurate)</p>
-    <p v-for="mat in completed" :key="mat.identifier">{{mat.name}} - {{mat.amount}}</p>
+    <p v-for="mat in completed" :key="mat.identifier">
+      {{ mat.name }} - {{ mat.amount }}
+    </p>
   </div>
 </template>
 
@@ -31,7 +33,7 @@ export default {
       if (!steps) steps = [];
       if (!inMaterials) inMaterials = this.getItemsToCraft;
       let stepMaterials = {};
-      let complete = incomplete || {}
+      let complete = incomplete || {};
       for (let rItem in inMaterials) {
         let item = inMaterials[rItem];
         let TitemMaterials = item.materials;
@@ -64,12 +66,10 @@ export default {
         let material = stepMaterials[mat];
         if (material.materials) {
           shouldRecurse = true;
-        }else {
+        } else {
           if (complete[material.identifier]) {
-            console.log("adidng", complete[material.identifier].amount, material.amount)
             complete[material.identifier].amount += material.amount;
-            console.log("ddn", complete[material.identifier].amount, material.amount)
-          }else {
+          } else {
             complete[material.identifier] = material;
           }
         }
@@ -80,7 +80,7 @@ export default {
       } else {
         this.$store.state.steps = steps;
         this.$store.state.complete = complete;
-        return steps,complete;
+        return steps, complete;
       }
     },
   },
@@ -122,7 +122,7 @@ export default {
       return materials;
     },
     getTotalMaterials() {
-      let a = this.calculateMaterials()
+      let a = this.calculateMaterials();
       let b;
       b = a;
       a = b;
