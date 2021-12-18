@@ -76,6 +76,7 @@
         "name": "6-Hydroxyinl Benzilate",
         "image": "img/chem_benzilate.png",
         "type": "item",
+        "itemType": "exotic",
         "stacksize": 1
     },
     "WOOD_PLANK": {
