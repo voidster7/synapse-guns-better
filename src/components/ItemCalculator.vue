@@ -15,14 +15,6 @@
       </div>
     </div>
     {{ getTotalMaterials }}
-    <div v-for="step in steps" :key="step.name" class="stepDiv">
-      <div class="itemInfo">
-        <p class="itemName">Step: {{ step.id + 1 }}</p>
-        <div v-for="material in step.materials" :key="material.identifier">
-          <p>{{material.name}} - {{material.amount}}</p>
-        </div>
-      </div>
-    </div>
     <p>Total (should be accurate)</p>
     <p v-for="mat in completed" :key="mat.identifier">{{mat.name}} - {{mat.amount}}</p>
   </div>
