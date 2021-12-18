@@ -15,10 +15,22 @@
       </div>
     </div>
     {{ getTotalMaterials }}
-    <p>Total (should be accurate)</p>
-    <p v-for="mat in completed" :key="mat.identifier">
-      {{ mat.name }} - {{ mat.amount }}
-    </p>
+  </div>
+  <div id="TotalItems">
+    <h1>Total Item Costs</h1>
+    <div v-for="item in completed" :key="item.name" class="itemDiv">
+      <img
+        v-bind:class="['craftingItem', 'itemImg']"
+        v-bind:src="item.image"
+        alt="Not Found"
+        onerror='this.src = "img/undefined.png"'
+        style="transform: scaleX(1)"
+      />
+      <div class="itemInfo">
+        <p class="itemName">{{ item.name }}</p>
+        <p class="itemAmount">{{ item.amount }}</p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -140,6 +152,12 @@ export default {
 
 <style scoped>
 #ItemCalculator {
+  margin-left: 30px;
+  margin-top: 30px;
+  width: 23vw;
+}
+
+#TotalItems {
   margin-left: 30px;
   margin-top: 30px;
   width: 23vw;
