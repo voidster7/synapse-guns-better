@@ -99,6 +99,18 @@
         "image": "img/plank_willow.png",
         "type": "item"
     },
+    "CIRCUIT_BOARD": {
+        "name": "Circuit Board",
+        "image": "img/mat_circuit.png",
+        "type": "item",
+        "stacksize": 1
+    },
+    "DIAMOND": {
+        "name": "Diamond",
+        "image": "img/misc_diamond.png",
+        "type": "item",
+        "stacksize": 1
+    },
     "PISTOL_PART": {
         "name": "Pistol Part",
         "image": "img/mat_pistolbarrel.png",

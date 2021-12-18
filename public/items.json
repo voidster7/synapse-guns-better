@@ -475,5 +475,56 @@
             "GOLD_BAR": 13,
             "STEEL_BAR": 14
         }
+    },
+    "hardened_drill": {
+        "name": "Hardened Drill",
+        "image": "img/dheists_drill_hardened.png",
+        "legal": false,
+        "marketprice": 0,
+        "itemType": "craftingItem",
+        "materials": {
+            "SILVER_BAR": 5,
+            "DIAMOND": 1,
+            "COPPER_BAR": 10,
+            "STEEL_BAR": 10,
+            "CIRCUIT_BOARD": 1
+        }
+    },
+    "doorcharge": {
+        "name": "Door Charge",
+        "image": "img/door_charge.png",
+        "legal": false,
+        "marketprice": 0,
+        "itemType": "craftingItem",
+        "materials": {
+            "COPPER_BAR": 6,
+            "IRON_BAR": 8,
+            "GOLD_BAR": 4,
+            "STEEL_BAR": 3
+        }
+    },
+    "gasfilter": {
+        "name": "Gas Filter",
+        "image": "img/mat_gas_filter.png",
+        "legal": true,
+        "marketprice": 0,
+        "itemType": "craftingItem",
+        "materials": {
+            "COPPER_BAR": 4,
+            "IRON_BAR": 4,
+            "STEEL_BAR": 2
+        }
+    },
+    "gasmask": {
+        "name": "Gas Mask",
+        "image": "img/mono_gas_mask.png",
+        "legal": true,
+        "marketprice": 0,
+        "itemType": "craftingItem",
+        "materials": {
+            "COPPER_BAR": 4,
+            "IRON_BAR": 4,
+            "STEEL_BAR": 4
+        }
     }
 }

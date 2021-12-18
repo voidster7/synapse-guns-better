@@ -28,7 +28,7 @@
       />
       <div class="itemInfo">
         <p class="itemName">{{item.amount}} {{ item.name }}{{item.amount>1 ? "s" : ""}}</p>
-        <p class="itemAmount">Around {{Math.round(item.amount / item.stacksize)}} Stack(s) with a stacksize of {{item.stacksize}}</p>
+        <p class="itemAmount" v-if="item.stacksize > 1">Around {{Math.round(item.amount / item.stacksize)}} Stack(s) with a stacksize of {{item.stacksize}}</p>
       </div>
     </div>
   </div>
