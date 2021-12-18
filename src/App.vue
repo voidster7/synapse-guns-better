@@ -78,6 +78,10 @@ export default {
   );
 }
 
+.itemMarketprice,.itemPrice,.itemLegality {
+  font-size: 1vw;
+}
+
 .craftingItem {
   background: rgb(255, 255, 255);
   background: linear-gradient(

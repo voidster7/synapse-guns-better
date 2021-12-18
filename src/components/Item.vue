@@ -56,8 +56,8 @@ export default {
 .itemName {
   display: inline;
   font-size: 1vw;
-  margin-bottom: 0.3vh;
-  margin-top: 1vh;
+  margin-bottom: 0.2vw;
+  margin-top: 0.5vw;
   margin-left: 0.3vw;
 }
 
