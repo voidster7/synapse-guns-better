@@ -10,8 +10,8 @@
         style="transform: scaleX(1)"
       />
       <div class="itemInfo">
-        <p class="itemName">{{ item.name }}</p>
-        <p class="itemAmount">{{ item.amount }}</p>
+        <p class="itemName">{{item.amount}} {{ item.name }}{{item.amount>1 ? "s" : ""}}</p>
+        <p class="itemPrice">{{getFormattedMarketprice(item)}}</p>
       </div>
     </div>
     {{ getTotalMaterials }}
@@ -27,8 +27,8 @@
         style="transform: scaleX(1)"
       />
       <div class="itemInfo">
-        <p class="itemName">{{ item.name }}</p>
-        <p class="itemAmount">{{ item.amount }}</p>
+        <p class="itemName">{{item.amount}} {{ item.name }}{{item.amount>1 ? "s" : ""}}</p>
+        <p class="itemAmount">Around {{Math.round(item.amount / item.stacksize)}} Stack(s) with a stacksize of {{item.stacksize}}</p>
       </div>
     </div>
   </div>
@@ -95,6 +95,17 @@ export default {
         return steps, complete;
       }
     },
+    getFormattedMarketprice(item) {
+      if (item.marketprice == 0) {
+        return "Unknown Value";
+      } else {
+        return new Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency: "USD",
+          maximumFractionDigits: 0,
+        }).format(item.marketprice * item.amount);
+      }
+    },
   },
   props: {},
   data() {},
@@ -148,6 +159,7 @@ export default {
       for (let i in this.$store.state.complete){
         let item = this.$store.state.complete[i];
         if (!item.itemType) item.itemType = "craftingItem"
+        if (!item.stacksize) item.stacksize = 32;
         completed[item.identifier] = item;
       }
       return completed;
@@ -173,6 +185,9 @@ export default {
   display: flex;
   justify-content: center;
 }
+.itemPrice {
+  margin-left: 0.3vw;
+}
 .itemInfo {
   display: flex;
   flex-direction: column;
@@ -196,12 +211,7 @@ export default {
 }
 .itemAmount {
   display: inline;
-  background-color: blue;
-  width: 1vw;
-  text-align: center;
-  border-radius: 0.5vw;
-  height: 1vw;
-  padding: 0.5vw;
+  font-size: 1vw;
 }
 .itemDiv {
   display: flex;
