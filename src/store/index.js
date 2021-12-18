@@ -29,6 +29,9 @@ export default createStore({
     setMaterials(state, payload) {
       let materials = payload;
       state.materials = materials;
+    },
+    toggleMenu(state) {
+      state.menuOpen = !state.menuOpen;
     }
   },
   getters: {

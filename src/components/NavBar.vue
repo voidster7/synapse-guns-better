@@ -3,13 +3,19 @@
     <h2 id="navbartext">
       {{ siteName }}
     </h2>
+    <i class="fas fa-cogs" id="openSettings" @click="toggleSettings()"></i>
   </div>
 </template>
 <script>
 export default {
   name: "NavBar",
   props: {
-    siteName: String
+    siteName: String,
+  },
+  methods: {
+    toggleSettings() {
+      this.$store.commit("toggleMenu");
+    },
   },
 };
 </script>
@@ -22,11 +28,16 @@ export default {
   height: 5vh;
   display: flex;
   align-items: center;
-
 }
 
 #navbartext {
   font-size: 1.5vw;
 }
-
+#openSettings {
+  font-size: 1.5vw;
+  cursor: pointer;
+  text-align: center;
+  position: absolute;
+  right: 1vw;
+}
 </style>
