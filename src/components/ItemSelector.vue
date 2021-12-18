@@ -9,8 +9,13 @@
       />
     </div>
     <div class="itemContainer">
-      <div v-for="(item, itemKey) in filteredItems" :key="item.name" class="itemDiv" @click="addItemToCraft(itemKey)">
-          <item :item="item"> </item>
+      <div
+        v-for="(item, itemKey) in filteredItems"
+        :key="item.name"
+        class="itemDiv"
+        @click="addItemToCraft(itemKey)"
+      >
+        <item :item="item"> </item>
       </div>
     </div>
   </div>
@@ -27,7 +32,7 @@ export default {
   },
   methods: {
     addItemToCraft(item) {
-      this.$store.commit("changeItemAmount", {item: item, amount: 1})
+      this.$store.commit("changeItemAmount", { item: item, amount: 1 });
     },
   },
   props: {},
@@ -39,7 +44,6 @@ export default {
   computed: {
     getItemsToCraft() {
       return this.$store.state.itemsToCraft;
-
     },
     filteredItems() {
       var search = this.searchInput.toLowerCase();
@@ -98,6 +102,9 @@ export default {
 }
 
 .itemContainer {
+  overflow-y: scroll;
+  height: 80vh;
+  /* height: 10vw; */
   display: flex;
   flex-direction: column;
 }
