@@ -1,5 +1,6 @@
 <template>
   <NavBar siteName="Crafting Calculator"></NavBar>
+  <Menu v-if="isMenuOpen"></Menu>
   <div id="parent">
     <ItemSelector></ItemSelector>
     <ItemCalculator></ItemCalculator>
@@ -14,12 +15,14 @@ import NavBar from "./components/NavBar.vue";
 import ItemSelector from "./components/ItemSelector.vue";
 import ItemCalculator from "./components/ItemCalculator.vue";
 import axios from "axios";
+import Menu from "./components/Menu.vue";
 export default {
   name: "App",
   components: {
     NavBar,
     ItemSelector,
     ItemCalculator,
+    Menu,
   },
   methods: {
     async fetchItems() {
@@ -27,6 +30,11 @@ export default {
       let materials = await axios.get("./materials.json");
       this.$store.commit("setItems", items.data);
       this.$store.commit("setMaterials", materials.data);
+    },
+  },
+  computed: {
+    isMenuOpen() {
+      return this.$store.state.menuOpen;
     },
   },
 };
@@ -78,7 +86,9 @@ export default {
   );
 }
 
-.itemMarketprice,.itemPrice,.itemLegality {
+.itemMarketprice,
+.itemPrice,
+.itemLegality {
   font-size: 1vw;
 }
 
