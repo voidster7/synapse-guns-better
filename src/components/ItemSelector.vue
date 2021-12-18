@@ -109,6 +109,18 @@ export default {
   flex-direction: column;
 }
 
+::-webkit-scrollbar {
+  width: 1vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(102, 102, 102);
+  border-radius: 0.15vw;
+}
+::-webkit-scrollbar-track {
+  background-color: rgb(51, 51, 51);
+}
+
 .itemDiv {
   display: flex;
   align-items: center;
