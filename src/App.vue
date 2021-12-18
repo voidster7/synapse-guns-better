@@ -77,6 +77,15 @@ export default {
     rgba(238, 255, 0, 1) 100%
   );
 }
+
+.craftingItem {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
 * {
   margin: 0;
   padding: 0;

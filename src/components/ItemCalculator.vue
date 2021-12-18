@@ -20,7 +20,7 @@
     <h1>Total Item Costs</h1>
     <div v-for="item in completed" :key="item.name" class="itemDiv">
       <img
-        v-bind:class="['craftingItem', 'itemImg']"
+        v-bind:class="[item.itemType, 'itemImg']"
         v-bind:src="item.image"
         alt="Not Found"
         onerror='this.src = "img/undefined.png"'
@@ -144,7 +144,13 @@ export default {
       return this.$store.state.steps;
     },
     completed() {
-      return this.$store.state.complete;
+      let completed = {};
+      for (let i in this.$store.state.complete){
+        let item = this.$store.state.complete[i];
+        if (!item.itemType) item.itemType = "craftingItem"
+        completed[item.identifier] = item;
+      }
+      return completed;
     },
   },
 };
