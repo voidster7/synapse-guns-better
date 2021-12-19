@@ -84,7 +84,7 @@ export default {
 
 #search {
   display: block;
-  width: 15vw;
+  width: 23vw;
   height: 2vw;
   border: 4px solid #333;
   background-color: #222;
@@ -95,7 +95,8 @@ export default {
   transition-duration: 333ms;
 }
 #search:focus {
-  width: 16vw;
+  border: 4px solid rgb(83, 83, 83);
+  border-radius: 0.3vw;
 }
 #search::placeholder {
   color: rgb(218, 218, 218);
