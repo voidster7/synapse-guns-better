@@ -84,25 +84,61 @@
         "itemType": "exotic",
         "stacksize": 1
     },
+    "WOOD_LOG": {
+        "name": "Wood Log",
+        "image": "img/mat_wood.png",
+        "type": "item",
+        "itemType": "craftingItem"
+    },
+    "MAPLE_LOG": {
+        "name": "Maple Log",
+        "image": "img/mat_maple.png",
+        "type": "item",
+        "itemType": "craftingItem"
+    },
+    "BIRCH_LOG": {
+        "name": "Birch Log",
+        "image": "img/mat_birch.png",
+        "type": "item",
+        "itemType": "craftingItem"
+    },
+    "WILLOW_LOG": {
+        "name": "Willow Log",
+        "image": "img/mat_willow.png",
+        "type": "item",
+        "itemType": "craftingItem"
+    },
     "WOOD_PLANK": {
         "name": "Wood Plank",
         "image": "img/plank_wood.png",
-        "type": "item"
+        "type": "item",
+        "materials": {
+            "WOOD_LOG": 4
+        }
     },
     "MAPLE_PLANK": {
         "name": "Maple Plank",
         "image": "img/plank_maple.png",
-        "type": "item"
+        "type": "item",
+        "materials": {
+            "MAPLE_LOG": 4
+        }
     },
     "BIRCH_PLANK": {
         "name": "Wood Plank",
         "image": "img/plank_birch.png",
-        "type": "item"
+        "type": "item",
+        "materials": {
+            "BIRCH_LOG": 4
+        }
     },
     "WILLOW_PLANK": {
         "name": "Wood Plank",
         "image": "img/plank_willow.png",
-        "type": "item"
+        "type": "item",
+        "materials": {
+            "WILLOW_LOG": 4
+        }
     },
     "CIRCUIT_BOARD": {
         "name": "Circuit Board",
