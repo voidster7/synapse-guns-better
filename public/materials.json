@@ -147,6 +147,7 @@
         "name": "Circuit Board",
         "image": "img/mat_circuit.png",
         "type": "item",
+        "price": 250,
         "stacksize": 1
     },
     "DIAMOND": {

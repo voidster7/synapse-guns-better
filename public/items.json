@@ -526,5 +526,57 @@
             "IRON_BAR": 4,
             "STEEL_BAR": 4
         }
+    },
+    "pistol_ammo": {
+        "name": "Pistol Ammo",
+        "image": "img/ammo_cw_pistol.png",
+        "legal": true,
+        "marketprice": 258,
+        "itemType": "craftingItem",
+        "materials": {
+            "COPPER_BAR": 3
+        }
+    },
+    "shotgun_ammo": {
+        "name": "12 Gauge Ammo",
+        "image": "img/ammo_cw_shotgun.png",
+        "legal": true,
+        "marketprice": 332,
+        "itemType": "craftingItem",
+        "materials": {
+            "IRON_BAR": 3
+        }
+    },
+    "sniper_ammo": {
+        "name": "Sniper Ammo",
+        "image": "img/ammo_cw_sniper.png",
+        "legal": true,
+        "marketprice": 1209,
+        "itemType": "craftingItem",
+        "materials": {
+            "IRON_BAR": 3
+        }
+    },
+    "rifle_ammo": {
+        "name": "Rifle Ammo",
+        "image": "img/ammo_cw_rifle.png",
+        "legal": true,
+        "marketprice": 975,
+        "itemType": "craftingItem",
+        "materials": {
+            "IRON_BAR": 3,
+            "COPPER_BAR": 3
+        }
+    },
+    "gl_ammo": {
+        "name": "Grenade Launcher Ammo",
+        "image": "img/ammo_cw_gl.png",
+        "legal": true,
+        "marketprice": 0,
+        "itemType": "craftingItem",
+        "materials": {
+            "GOLD_BAR": 5,
+            "STEEL_BAR": 30
+        }
     }
 }
