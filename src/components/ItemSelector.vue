@@ -107,6 +107,8 @@ export default {
   /* height: 10vw; */
   display: flex;
   flex-direction: column;
+  padding-right: 0.5vw;
+  margin-top: 0.2vw;
 }
 
 ::-webkit-scrollbar {
