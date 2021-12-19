@@ -1,7 +1,12 @@
 <template>
   <div id="ItemCalculator">
     <h1>Items to craft</h1>
-    <div v-for="item in getItemsToCraft" :key="item.name" class="itemDiv" @click="removeItemFromCraft(item.identifier)">
+    <div
+      v-for="item in getItemsToCraft"
+      :key="item.name"
+      class="itemDiv"
+      @click="removeItemFromCraft(item.identifier)"
+    >
       <img
         v-bind:class="[item.itemType, 'itemImg']"
         v-bind:src="item.image"
@@ -10,8 +15,10 @@
         style="transform: scaleX(1)"
       />
       <div class="itemInfo">
-        <p class="itemName">{{item.amount}} {{ item.name }}{{item.amount>1 ? "s" : ""}}</p>
-        <p class="itemPrice">{{getFormattedMarketprice(item)}}</p>
+        <p class="itemName">
+          {{ item.amount }} {{ item.name }}{{ item.amount > 1 ? "s" : "" }}
+        </p>
+        <p class="itemPrice">{{ getFormattedMarketprice(item) }}</p>
       </div>
     </div>
     {{ getTotalMaterials }}
@@ -27,9 +34,25 @@
         style="transform: scaleX(1)"
       />
       <div class="itemInfo">
-        <p class="itemName">{{item.amount}} {{ item.name }}{{item.amount>1 ? "s" : ""}}</p>
-        <p class="itemAmount" v-if="item.stacksize > 1">Around {{Math.round(item.amount / item.stacksize)}} Stack(s) with a stacksize of {{item.stacksize}}</p>
+        <p class="itemName">
+          {{ item.amount }} {{ item.name }}{{ item.amount > 1 ? "s" : "" }}
+        </p>
+        <p class="itemAmount" v-if="item.stacksize > 1">
+          Around {{ Math.round(item.amount / item.stacksize) }} Stack(s) with a
+          stacksize of {{ item.stacksize }}
+        </p>
+        <p class="itemPrice">{{ getFormattedETAPrice(item) }}</p>
       </div>
+    </div>
+    <div class="itemDiv" v-if="getRawTotalETAPrice > 0" style="margin-top: 1vw;">
+      <img
+        v-bind:class="['itemImg', 'greenItem']"
+        src="img/dollar.png"
+        alt="Not Found"
+        onerror='this.src = "img/undefined.png"'
+        style="transform: scaleX(1)"
+      />
+      <p class="itemPrice">Estimated price based on materials is {{getTotalETAPrice}}</p>
     </div>
   </div>
 </template>
@@ -106,13 +129,43 @@ export default {
         }).format(item.marketprice * item.amount);
       }
     },
+    getFormattedETAPrice(item) {
+      if (!item.price) item.price = 0;
+      if (item.price == 0) {
+        return "Unknown Value";
+      } else {
+        return new Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency: "USD",
+          maximumFractionDigits: 0,
+        }).format(item.price * item.amount);
+      }
+    },
     removeItemFromCraft(item) {
-      this.$store.commit("changeItemAmount", {item: item, amount: -1})
+      this.$store.commit("changeItemAmount", { item: item, amount: -1 });
     },
   },
   props: {},
   data() {},
   computed: {
+    getTotalETAPrice() {
+      let price = 0;
+      for (let i in this.completed) {
+        price += this.completed[i].price * this.completed[i].amount;
+      }
+      return new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+        maximumFractionDigits: 0,
+      }).format(price);
+    },
+    getRawTotalETAPrice() {
+      let price = 0;
+      for (let i in this.completed) {
+        price += this.completed[i].price * this.completed[i].amount;
+      }
+      return price;
+    },
     getItemsToCraft() {
       let items = [];
       for (let k in this.$store.state.itemsToCraft) {
@@ -159,9 +212,9 @@ export default {
     },
     completed() {
       let completed = {};
-      for (let i in this.$store.state.complete){
+      for (let i in this.$store.state.complete) {
         let item = this.$store.state.complete[i];
-        if (!item.itemType) item.itemType = "craftingItem"
+        if (!item.itemType) item.itemType = "craftingItem";
         if (!item.stacksize) item.stacksize = 32;
         completed[item.identifier] = item;
       }
@@ -214,7 +267,8 @@ export default {
 }
 .itemAmount {
   display: inline;
-  font-size: 1vw;
+  font-size: 0.8vw;
+  text-align: center;
 }
 .itemDiv {
   display: flex;

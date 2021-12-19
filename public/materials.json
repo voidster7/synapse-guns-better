@@ -50,27 +50,32 @@
     "COPPER_ORE": {
         "name": "Copper Ore",
         "image": "img/mat_copper.png",
-        "type": "ore"
+        "type": "ore",
+        "price": 50
     },
     "IRON_ORE": {
         "name": "Iron Ore",
         "image": "img/mat_iron.png",
-        "type": "ore"
+        "type": "ore",
+        "price": 50
     },
     "SILVER_ORE": {
         "name": "Silver Ore",
         "image": "img/mat_silver.png",
-        "type": "ore"
+        "type": "ore",
+        "price": 50
     },
     "GOLD_ORE": {
         "name": "Gold Ore",
         "image": "img/mat_gold.png",
-        "type": "ore"
+        "type": "ore",
+        "price": 50
     },
     "TITANIUM_ORE": {
         "name": "Titanium Ore",
         "image": "img/mat_titanium.png",
-        "type": "ore"
+        "type": "ore",
+        "price": 50
     },
     "HYDROXYNIL_BENZILATE": {
         "name": "6-Hydroxyinl Benzilate",

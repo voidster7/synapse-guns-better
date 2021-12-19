@@ -86,6 +86,15 @@ export default {
   );
 }
 
+.greenItem {
+  background: rgb(0, 255, 0);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 0, 0.4) 0%,
+    rgba(0, 255, 0, 1) 100%
+  );
+}
+
 .itemMarketprice,
 .itemPrice,
 .itemLegality {
