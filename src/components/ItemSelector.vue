@@ -107,7 +107,7 @@ export default {
   /* height: 10vw; */
   display: flex;
   flex-direction: column;
-  padding-right: 0.5vw;
+  padding-right: 0.3vw;
   margin-top: 0.2vw;
 }
 
