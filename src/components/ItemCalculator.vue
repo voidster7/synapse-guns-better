@@ -44,7 +44,7 @@
         <p class="itemPrice">{{ getFormattedETAPrice(item) }}</p>
       </div>
     </div>
-    <div class="itemDiv" v-if="getRawTotalETAPrice > 0" style="margin-top: 1vw;">
+    <div class="itemDiv" v-if="getRawTotalETAPrice > 0">
       <img
         v-bind:class="['itemImg', 'greenItem']"
         src="img/dollar.png"
@@ -52,7 +52,11 @@
         onerror='this.src = "img/undefined.png"'
         style="transform: scaleX(1)"
       />
-      <p class="itemPrice">Estimated price based on materials is {{getTotalETAPrice}}</p>
+      <div class="itemInfo">
+        <p class="itemName">
+          Estimated price based on materials is {{ getTotalETAPrice }}
+        </p>
+      </div>
     </div>
   </div>
 </template>
