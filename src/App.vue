@@ -1,5 +1,5 @@
 <template>
-  <NavBar siteName="Crafting Calculator"></NavBar>
+  <NavBar siteName="MonoGuns Revamped"></NavBar>
   <Menu v-if="isMenuOpen"></Menu>
   <div id="parent">
     <ItemSelector></ItemSelector>
