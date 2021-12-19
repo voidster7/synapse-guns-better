@@ -88,7 +88,8 @@
         "name": "Wood Log",
         "image": "img/mat_wood.png",
         "type": "item",
-        "itemType": "craftingItem"
+        "itemType": "craftingItem",
+        "price": 12
     },
     "MAPLE_LOG": {
         "name": "Maple Log",
@@ -100,13 +101,15 @@
         "name": "Birch Log",
         "image": "img/mat_birch.png",
         "type": "item",
-        "itemType": "craftingItem"
+        "itemType": "craftingItem",
+        "price": 40
     },
     "WILLOW_LOG": {
         "name": "Willow Log",
         "image": "img/mat_willow.png",
         "type": "item",
-        "itemType": "craftingItem"
+        "itemType": "craftingItem",
+        "price": 87
     },
     "WOOD_PLANK": {
         "name": "Wood Plank",
