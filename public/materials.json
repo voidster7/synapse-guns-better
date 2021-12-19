@@ -114,7 +114,8 @@
         "name": "Diamond",
         "image": "img/misc_diamond.png",
         "type": "item",
-        "stacksize": 1
+        "stacksize": 1,
+        "price": 20000
     },
     "PISTOL_PART": {
         "name": "Pistol Part",
