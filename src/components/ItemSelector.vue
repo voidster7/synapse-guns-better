@@ -8,7 +8,7 @@
         placeholder="Search"
       />
     </div>
-    <div class="itemContainer">
+    <div class="itemContainer" @contextmenu.prevent>
       <div
         v-for="(item, itemKey) in filteredItems"
         :key="item.name"
