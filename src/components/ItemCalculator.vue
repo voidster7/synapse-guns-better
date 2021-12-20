@@ -192,7 +192,6 @@ export default {
           let materialName = mat;
           let materialAmount = itemMaterials[mat] * item.amount;
           let material = this.$store.getters.getItem(materialName); // fetch the full material item object
-          console.log(material);
           if (!materials[materialName]) {
             // check if the material has already been added to the total, and if not add it
             material.amount = materialAmount;

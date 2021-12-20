@@ -33,10 +33,9 @@ export default {
     Item,
   },
   methods: {
-    rightClick(event, item) {
+    async rightClick(event, item) {
       event.preventDefault();
-      console.log(item);
-      Swal.fire({
+      let answer = await Swal.fire({
         title: "How many items would you like to add?",
         input: "range",
         inputValue: 2,
@@ -48,10 +47,22 @@ export default {
           step: 1,
         },
       });
+      if (answer.isConfirmed) {
+        let amount = parseInt(answer.value);
+        if (isNaN(amount)) {
+          return Swal.fire({
+            title: "Invalid Amount",
+            text: "Please enter a valid amount next time.",
+            icon: "error",
+          });
+        }
+        this.addItemToCraft(item.identifier, amount);
+      }
       // this.removeItemFromCraft(item);
     },
-    addItemToCraft(item) {
-      this.$store.commit("changeItemAmount", { item: item, amount: 1 });
+    addItemToCraft(item, amount) {
+      if (!amount) amount = 1;
+      this.$store.commit("changeItemAmount", { item: item, amount: amount });
     },
   },
   props: {},
@@ -71,6 +82,7 @@ export default {
         if (!itemList[k].image) {
           itemList[k].image = "img/undefined.png";
         }
+        itemList[k].identifier = k;
       }
       if (search) {
         let itemsFound = {};
