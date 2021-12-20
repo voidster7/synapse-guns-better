@@ -6,6 +6,7 @@
       :key="item.name"
       class="itemDiv"
       @click="removeItemFromCraft(item.identifier)"
+      @contextmenu="rightClick($event, item)"
     >
       <img
         v-bind:class="[item.itemType, 'itemImg']"
@@ -63,10 +64,39 @@
 
 
 <script>
+import Swal from "sweetalert2";
 export default {
   name: "ItemCalculator",
   components: {},
   methods: {
+    async rightClick(event, item) {
+      event.preventDefault();
+      let answer = await Swal.fire({
+        title: "How many items would you like to remove?",
+        input: "range",
+        inputValue: 1,
+        inputLabel: "Item Amount",
+        icon: "question",
+        inputAttributes: {
+          min: 1,
+          max: item.amount,
+          step: 1,
+        },
+      });
+      if (answer.isConfirmed) {
+        let amount = parseInt(answer.value);
+        if (isNaN(amount)) {
+          return Swal.fire({
+            title: "Invalid Amount",
+            text: "Please enter a valid amount next time.",
+            icon: "error",
+          });
+        }
+        if (amount > 0) amount = amount * -1;
+        this.removeItemFromCraft(item.identifier, amount);
+      }
+      // this.removeItemFromCraft(item);
+    },
     calculateMaterials(inMaterials, insteps, incomplete) {
       let steps = insteps;
       if (!steps) steps = [];
@@ -145,8 +175,9 @@ export default {
         }).format(item.price * item.amount);
       }
     },
-    removeItemFromCraft(item) {
-      this.$store.commit("changeItemAmount", { item: item, amount: -1 });
+    removeItemFromCraft(item, amount) {
+      if (!amount) amount = -1;
+      this.$store.commit("changeItemAmount", { item: item, amount: amount });
     },
   },
   props: {},
