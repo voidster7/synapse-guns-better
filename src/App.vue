@@ -7,6 +7,7 @@
   </div>
   <footer>
     <p>Website is in early development.</p>
+    <p style="text-align: center">#addtheflatbed</p>
   </footer>
 </template>
 
