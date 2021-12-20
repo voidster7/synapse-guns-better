@@ -36,7 +36,18 @@ export default {
     rightClick(event, item) {
       event.preventDefault();
       console.log(item);
-      Swal.fire({title: "Test"})
+      Swal.fire({
+        title: "How many items would you like to add?",
+        input: "range",
+        inputValue: 2,
+        inputLabel: "Item Amount",
+        icon: "question",
+        inputAttributes: {
+          min: 2,
+          max: 99,
+          step: 1,
+        },
+      });
       // this.removeItemFromCraft(item);
     },
     addItemToCraft(item) {

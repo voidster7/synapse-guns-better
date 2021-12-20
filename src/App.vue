@@ -120,8 +120,10 @@ export default {
   width: 100%;
   height: 100%;
 }
-#app {
+* {
   font-family: "Montserrat", sans-serif;
+}
+#app {
   color: white;
 }
 body {
