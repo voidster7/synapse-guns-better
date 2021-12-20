@@ -8,12 +8,13 @@
         placeholder="Search"
       />
     </div>
-    <div class="itemContainer" @contextmenu.prevent>
+    <div class="itemContainer">
       <div
         v-for="(item, itemKey) in filteredItems"
         :key="item.name"
         class="itemDiv"
         @click="addItemToCraft(itemKey)"
+        @contextmenu="rightClick($event, item)"
       >
         <item :item="item"> </item>
       </div>
@@ -24,6 +25,7 @@
 
 <script>
 import Item from "./Item.vue";
+import Swal from "sweetalert2";
 
 export default {
   name: "ItemSelector",
@@ -31,6 +33,12 @@ export default {
     Item,
   },
   methods: {
+    rightClick(event, item) {
+      event.preventDefault();
+      console.log(item);
+      Swal.fire({title: "Test"})
+      // this.removeItemFromCraft(item);
+    },
     addItemToCraft(item) {
       this.$store.commit("changeItemAmount", { item: item, amount: 1 });
     },
