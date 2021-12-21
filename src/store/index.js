@@ -6,9 +6,14 @@ export default createStore({
     options: {},
     optionsObj: [
       {
-        name: "Flatbed",
+        name: "Flatbed Background",
         id: "flatbed",
         default: true,
+      },
+      {
+        name: "Footer visible",
+        id: "footer",
+        default: true
       }
     ],
     materials: {},

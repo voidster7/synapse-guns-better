@@ -6,9 +6,10 @@
     <ItemSelector></ItemSelector>
     <ItemCalculator></ItemCalculator>
   </div>
-  <footer>
+  <footer v-if="shouldFooterBeVisible">
     <p>Website is in early development.</p>
-    <p style="text-align: center" v-if="shouldFlatbedBeVisible">#addtheflatbed</p>
+    <p style="text-align: center">#addtheflatbed</p>
+    <p class="smallText" style="text-align: center">Don't wanna see this? Turn it off in the settings</p>
   </footer>
 </template>
 
@@ -48,6 +49,9 @@ export default {
     shouldFlatbedBeVisible() {
       return this.$store.getters.getOption("flatbed");
     },
+    shouldFooterBeVisible() {
+      return this.$store.getters.getOption("footer");
+    }
   },
 };
 </script>
@@ -151,11 +155,18 @@ body {
   background-color: #111;
 }
 footer {
+  padding: 1vw;
+  border-radius: 0.3vw;
   position: fixed;
   right: 50%;
   transform: translate(50%, -50%);
-  top: 95%;
+  top: 90%;
   font-size: 2vw;
   color: orange;
+  background-color: black;
+  opacity: 0.5;
+}
+footer > .smallText {
+  font-size: 0.6vw;
 }
 </style>

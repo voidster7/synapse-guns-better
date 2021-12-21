@@ -62,7 +62,7 @@ export default {
   color: white !important;
 }
 .option {
-  margin: 1vw;
+  margin-top: 0.7vw;
 }
 #optionStore {
   margin-top: 1.5vw;
