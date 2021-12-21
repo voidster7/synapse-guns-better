@@ -1,4 +1,5 @@
 <template>
+  <iframe width="560" height="315" id="flatbed" src="https://www.youtube.com/embed/aYYWW7V25Ok?rel=0&controls=0&showinfo=0&autoplay=1&mute=1" allow="autoplay; encrypted-media"></iframe>
   <NavBar siteName="MonoGuns Revamped"></NavBar>
   <Menu v-if="isMenuOpen"></Menu>
   <div id="parent">
@@ -42,6 +43,15 @@ export default {
 </script>
 
 <style>
+#flatbed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
 .assaultrifle {
   background: rgb(255, 154, 0);
   background: linear-gradient(
