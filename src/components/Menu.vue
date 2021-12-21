@@ -1,20 +1,32 @@
 <template>
   <div id="menu">
+    <link rel="stylesheet" href="css/toggle-switchy.css" />
     <h1>Settings</h1>
     <h3>
-      Hey yeah, sorry to disappoint you, but there's nothing here so far. Go
-      suggest something we could add :)
+      In this settings menu, you're able to toggle certain options of the
+      website on / off. There may be more settings added in the future.
     </h3>
     <div id="optionStore">
       <div class="option" v-for="option in options" :key="option.id">
+        <label class="toggle-switchy" :for="'opt_'+option.id" data-size="lg" data-label="left">
+          <input
+            type="checkbox"
+            :id="'opt_' + option.id"
+            :checked="isChecked(option.id)"
+            @change="handleChange"
+          />
+          <span class="toggle">
+            <span class="switch"></span>
+          </span>
+          <span class="label">{{ option.name }}</span>
+        </label>
         <!-- checkbox -->
-        <input
+        <!-- <input
           type="checkbox"
           :id="'opt_' + option.id"
           :checked="isChecked(option.id)"
           @change="handleChange"
-        />
-        <label for="option.id">{{ option.name }}</label>
+        /> -->
       </div>
     </div>
   </div>
@@ -48,6 +60,16 @@ export default {
 };
 </script>
 <style scoped>
+.label {
+  color: white !important; 
+}
+#optionStore {
+  margin-top: 1.5vw;
+  display: flex;
+  margin-left: 1vw;
+  flex-wrap: wrap;
+  flex-direction:column;
+}
 #menu {
   position: fixed;
   display: block;

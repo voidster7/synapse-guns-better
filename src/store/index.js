@@ -10,6 +10,11 @@ export default createStore({
         id: "flatbed",
         default: true,
       },
+      {
+        name: "Fartpoo",
+        id: "fpoo",
+        default: false
+      }
     ],
     materials: {},
     itemsToCraft: {},
@@ -65,7 +70,7 @@ export default createStore({
 
       if (val == undefined) {
         for (let i in state.optionsObj) {
-          if (state.optionsObj[i].default) {
+          if (state.optionsObj[i].default && state.optionsObj[i].id == identifier) {
             val = true;
           }
         }
