@@ -8,7 +8,12 @@
     </h3>
     <div id="optionStore">
       <div class="option" v-for="option in options" :key="option.id">
-        <label class="toggle-switchy" :for="'opt_'+option.id" data-size="lg" data-label="left">
+        <label
+          class="toggle-switchy"
+          :for="'opt_' + option.id"
+          data-size="lg"
+          data-label="left"
+        >
           <input
             type="checkbox"
             :id="'opt_' + option.id"
@@ -20,13 +25,6 @@
           </span>
           <span class="label">{{ option.name }}</span>
         </label>
-        <!-- checkbox -->
-        <!-- <input
-          type="checkbox"
-          :id="'opt_' + option.id"
-          :checked="isChecked(option.id)"
-          @change="handleChange"
-        /> -->
       </div>
     </div>
   </div>
@@ -61,14 +59,17 @@ export default {
 </script>
 <style scoped>
 .label {
-  color: white !important; 
+  color: white !important;
+}
+.option {
+  margin: 1vw;
 }
 #optionStore {
   margin-top: 1.5vw;
   display: flex;
   margin-left: 1vw;
   flex-wrap: wrap;
-  flex-direction:column;
+  flex-direction: column;
 }
 #menu {
   position: fixed;
