@@ -8,7 +8,7 @@
   </div>
   <footer>
     <p>Website is in early development.</p>
-    <p style="text-align: center">#addtheflatbed</p>
+    <p style="text-align: center" v-if="shouldFlatbedBeVisible">#addtheflatbed</p>
   </footer>
 </template>
 
