@@ -9,11 +9,6 @@ export default createStore({
         name: "Flatbed",
         id: "flatbed",
         default: true,
-      },
-      {
-        name: "Fartpoo",
-        id: "fpoo",
-        default: false
       }
     ],
     materials: {},
