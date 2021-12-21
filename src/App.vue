@@ -1,5 +1,5 @@
 <template>
-  <iframe width="560" height="315" id="flatbed" src="https://www.youtube.com/embed/aYYWW7V25Ok?rel=0&controls=0&showinfo=0&autoplay=1&mute=1" allow="autoplay; encrypted-media"></iframe>
+  <iframe v-if="shouldFlatbedBeVisible" width="560" height="315" id="flatbed" src="https://www.youtube.com/embed/aYYWW7V25Ok?rel=0&controls=0&showinfo=0&autoplay=1&mute=1" allow="autoplay; encrypted-media"></iframe>
   <NavBar siteName="MonoGuns Revamped"></NavBar>
   <Menu v-if="isMenuOpen"></Menu>
   <div id="parent">
@@ -32,11 +32,21 @@ export default {
       let materials = await axios.get("./materials.json");
       this.$store.commit("setItems", items.data);
       this.$store.commit("setMaterials", materials.data);
+      let options = JSON.parse(localStorage.getItem("options")) || {}
+      for (let i in options) {
+        this.$store.commit("setOption", {
+          option: i,
+          value: options[i],
+        });
+      }
     },
   },
   computed: {
     isMenuOpen() {
       return this.$store.state.menuOpen;
+    },
+    shouldFlatbedBeVisible() {
+      return this.$store.getters.getOption("flatbed");
     },
   },
 };
