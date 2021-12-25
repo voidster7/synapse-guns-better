@@ -43,43 +43,4 @@ export default {
 };
 </script>
 <style scoped>
-.itemInfo {
-  display: flex;
-  flex-direction: column;
-  margin: 5px 5px 5px 0;
-  width: calc(100% - 5px);
-  height: calc(100% - 10px);
-  background: #222;
-  border-radius: 3px;
-}
-
-.itemName {
-  display: inline;
-  font-size: 1vw;
-  margin-bottom: 0.2vw;
-  margin-top: 0.5vw;
-  margin-left: 0.3vw;
-}
-
-.itemMarketprice,
-.itemIllegal,
-.itemLegal {
-  margin-left: 0.3vw;
-}
-
-.itemImg {
-  display: inline;
-  margin: 5px 5px 5px 5px;
-  height: calc(100% - 10px);
-  border-radius: 3px;
-}
-
-.itemIllegal {
-  color: red;
-}
-
-.itemLegal {
-  color: green;
-}
-
 </style>

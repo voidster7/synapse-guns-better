@@ -66,6 +66,66 @@ export default {
 </script>
 
 <style>
+.itemDiv {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  width: 100%;
+  height: 6vw;
+  background: #333;
+  cursor: pointer;
+}
+.itemInfo {
+  display: flex;
+  flex-direction: column;
+  margin: 0.2vw 0.2vw 0.2vw 0;
+  width: calc(100% - 0.25vw);
+  height: calc(100% - 0.5vw);
+  background: #222;
+  border-radius: 0.1vw;
+}
+.itemAmount {
+  display: inline;
+  font-size: 0.8vw;
+  text-align: center;
+}
+.itemName {
+  display: inline;
+  font-size: 1vw;
+  margin-bottom: 0.2vw;
+  margin-top: 0.5vw;
+  margin-left: 0.3vw;
+}
+.flexCenter {
+  display: flex;
+  justify-content: center;
+}
+.itemContainer {
+  display: flex;
+  flex-direction: column;
+}
+.itemMarketprice,
+.itemIllegal,
+.itemLegal,
+.itemPrice {
+  margin-left: 0.3vw;
+}
+
+.itemImg {
+  display: inline;
+  margin: 0.2vw 0.2vw 0.2vw 0.2vw;
+  height: calc(100% - 0.5vw);
+  border-radius: 0.1vw;
+}
+
+.itemIllegal {
+  color: red;
+}
+
+.itemLegal {
+  color: green;
+}
+
 #flatbed {
   position: fixed;
   top: 0;

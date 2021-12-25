@@ -259,7 +259,6 @@ export default {
 </script>
 
 <style scoped>
-
 .sectionHeader {
   font-size: 2vw;
 }
@@ -275,48 +274,6 @@ export default {
   width: 23vw;
 }
 
-.flexCenter {
-  display: flex;
-  justify-content: center;
-}
-.itemPrice {
-  margin-left: 0.3vw;
-}
-.itemInfo {
-  display: flex;
-  flex-direction: column;
-  margin: 5px 5px 5px 0;
-  width: calc(100% - 5px);
-  height: calc(100% - 10px);
-  background: #222;
-  border-radius: 3px;
-}
-
-.itemName {
-  display: inline;
-  font-size: 1vw;
-  margin-bottom: 0.2vw;
-  margin-top: 0.5vw;
-  margin-left: 0.3vw;
-}
-.itemContainer {
-  display: flex;
-  flex-direction: column;
-}
-.itemAmount {
-  display: inline;
-  font-size: 0.8vw;
-  text-align: center;
-}
-.itemDiv {
-  display: flex;
-  align-items: center;
-  margin-top: 5px;
-  width: 100%;
-  height: 6vw;
-  background: #333;
-  cursor: pointer;
-}
 .stepDiv {
   display: flex;
   align-items: center;
@@ -324,12 +281,5 @@ export default {
   width: 100%;
   min-height: 6vw;
   background: #333;
-}
-
-.itemImg {
-  display: inline;
-  margin: 5px 5px 5px 5px;
-  height: calc(100% - 10px);
-  border-radius: 3px;
 }
 </style>

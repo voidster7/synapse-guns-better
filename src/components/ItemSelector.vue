@@ -108,11 +108,6 @@ export default {
   width: 23vw;
 }
 
-.flexCenter {
-  display: flex;
-  justify-content: center;
-}
-
 #search {
   display: block;
   width: 23vw;
@@ -153,15 +148,5 @@ export default {
 }
 ::-webkit-scrollbar-track {
   background-color: rgb(51, 51, 51);
-}
-
-.itemDiv {
-  display: flex;
-  align-items: center;
-  margin-top: 5px;
-  width: 100%;
-  height: 6vw;
-  background: #333;
-  cursor: pointer;
 }
 </style>
