@@ -1,6 +1,6 @@
 <template>
   <div id="ItemCalculator">
-    <h1>Items to craft</h1>
+    <h1 class="sectionHeader">Items to craft</h1>
     <div
       v-for="item in getItemsToCraft"
       :key="item.name"
@@ -25,7 +25,7 @@
     {{ getTotalMaterials }}
   </div>
   <div id="TotalItems">
-    <h1>Total Item Costs</h1>
+    <h1 class="sectionHeader">Total Item Costs</h1>
     <div v-for="item in completed" :key="item.name" class="itemDiv">
       <img
         v-bind:class="[item.itemType, 'itemImg']"
@@ -259,6 +259,10 @@ export default {
 </script>
 
 <style scoped>
+
+.sectionHeader {
+  font-size: 2vw;
+}
 #ItemCalculator {
   margin-left: 30px;
   margin-top: 30px;
