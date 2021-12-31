@@ -507,7 +507,7 @@
         "name": "Gas Filter",
         "image": "img/mat_gas_filter.png",
         "legal": true,
-        "marketprice": 0,
+        "marketprice": 2000,
         "itemType": "craftingItem",
         "materials": {
             "COPPER_BAR": 4,
@@ -519,7 +519,7 @@
         "name": "Gas Mask",
         "image": "img/mono_gas_mask.png",
         "legal": true,
-        "marketprice": 0,
+        "marketprice": 3000,
         "itemType": "craftingItem",
         "materials": {
             "COPPER_BAR": 4,
