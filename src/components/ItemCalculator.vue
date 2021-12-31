@@ -39,10 +39,10 @@
           {{ item.amount }} {{ item.name }}{{ item.amount > 1 ? "s" : "" }}
         </p>
         <p class="itemAmount" v-if="item.stacksize > 1">
-          Around {{ Math.round(item.amount / item.stacksize) }} Stack(s) with a
-          stacksize of {{ item.stacksize }}
+          {{ Math.floor(item.amount / item.stacksize) }} Stack{{Math.floor(item.amount / item.stacksize) != 1 ? "s" : ""}} {{item.amount % item.stacksize > 0 ? `and ${item.amount % item.stacksize}` : ""}} {{ item.name }}{{ item.amount > 1 ? "s" : "" }}
         </p>
         <p class="itemPrice">{{ getFormattedETAPrice(item) }}</p>
+        <p class="itemStacksize">Stack size of 32</p>
       </div>
     </div>
     <div class="itemDiv" v-if="getRawTotalETAPrice > 0">
