@@ -480,7 +480,7 @@
         "name": "Hardened Drill",
         "image": "img/dheists_drill_hardened.png",
         "legal": false,
-        "marketprice": 0,
+        "marketprice": 30000,
         "itemType": "craftingItem",
         "materials": {
             "SILVER_BAR": 5,
