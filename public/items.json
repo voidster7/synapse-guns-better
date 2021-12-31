@@ -52,7 +52,7 @@
         "name": "MR96",
         "image": "img/weapon_cw_357.png",
         "legal": true,
-        "marketprice": 2000,
+        "marketprice": 3500,
         "itemType": "pistol",
         "materials": {
             "COPPER_BAR": 8,
