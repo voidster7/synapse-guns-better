@@ -76,6 +76,7 @@ export default {
   cursor: pointer;
 }
 .itemInfo {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin: 0.2vw 0.2vw 0.2vw 0;
@@ -86,8 +87,15 @@ export default {
 }
 .itemAmount {
   display: inline;
-  font-size: 0.8vw;
-  text-align: center;
+  font-size: 1vw;
+  margin-left: 0.3vw;
+  margin-bottom: 0.1vw;
+}
+.itemStacksize {
+  position: absolute;
+  font-size: 0.9vw;
+  right: 0.2vw;
+  bottom: 0.2vw;
 }
 .itemName {
   display: inline;
