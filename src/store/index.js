@@ -62,6 +62,7 @@ export default createStore({
       let rItem = state.items[item];
       if (!rItem) rItem = state.materials[item];
       if (!rItem) return null;
+      if (!rItem.itemType) rItem.itemType = "craftingItem";
       rItem.identifier = item;
       return rItem;
     },

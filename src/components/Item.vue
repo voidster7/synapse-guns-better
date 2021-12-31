@@ -43,4 +43,10 @@ export default {
 };
 </script>
 <style scoped>
+#openItemMats {
+  font-size: 3vw;
+  position: absolute;
+  right: 0.5vw;
+  bottom: 0.5vw;
+}
 </style>

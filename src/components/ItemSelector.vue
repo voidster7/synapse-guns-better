@@ -12,11 +12,32 @@
       <div
         v-for="(item, itemKey) in filteredItems"
         :key="item.name"
-        class="itemDiv"
-        @click="addItemToCraft(itemKey)"
-        @contextmenu="rightClick($event, item)"
-      >
-        <item :item="item"> </item>
+        class="item">
+
+        <div class="itemDiv"
+          @click="addItemToCraft(itemKey)"
+          @contextmenu="rightClick($event, item)"><item :item="item"></item>
+        </div>
+        <div v-if="shouldShowItemMats(itemKey)" class="itemMats">
+          <div class="itemDiv" v-for="(material, materialKey) in getItemMaterials(itemKey)" :key="materialKey" style="margin-left:0.2vw;">
+            <img
+              v-bind:class="[material.itemType, 'itemImg']"
+              v-bind:src="material.image"
+              alt="Not Found"
+              onerror='this.src = "img/undefined.png"'
+              style="transform: scaleX(1)"
+            />
+            <div class="itemInfo">
+              <p class="itemName">
+                {{ material.amount }} {{ material.name }}{{ material.amount > 1 ? "s" : "" }}
+              </p>
+            </div>
+          </div>
+        </div>
+        <i class="fas fa-caret-square-down itemMatButton"
+        :class="['fas', 'itemMatButton', shouldShowItemMats(itemKey) ? 'fa-caret-square-up' : 'fa-caret-square-down']"
+          @click="toggleItemMats(itemKey)">
+        </i>
       </div>
     </div>
   </div>
@@ -64,11 +85,33 @@ export default {
       if (!amount) amount = 1;
       this.$store.commit("changeItemAmount", { item: item, amount: amount });
     },
+    shouldShowItemMats(itemKey) {
+      return this.itemMatsShown[itemKey] ? true : false;
+    },
+    toggleItemMats(itemKey) {
+      if (this.itemMatsShown[itemKey]) {
+        delete this.itemMatsShown[itemKey];
+      } else {
+        this.itemMatsShown[itemKey] = true;
+      }
+    },
+    getItemMaterials(itemKey) {
+      let materials = {};
+      let item = this.$store.getters.getItem(itemKey)
+      for (let k in item.materials) {
+        let material = this.$store.getters.getItem(k)
+        material.amount = item.materials[k]
+        materials[k] = material
+      }
+      console.log(materials)
+      return materials;
+    }
   },
   props: {},
   data() {
     return {
       searchInput: "",
+      itemMatsShown: {},
     };
   },
   computed: {
@@ -102,6 +145,20 @@ export default {
 </script>
 
 <style scoped>
+.itemMatButton {
+  position: absolute;
+  top: 3.5vw;
+  right: 0.8vw;
+  font-size: 2vw;
+  cursor: pointer;
+  transition-duration: 200ms;
+}
+.itemMatButton:hover {
+  color: #ffc107;
+}
+.item {
+  position: relative;
+}
 #ItemSelector {
   margin-left: 30px;
   margin-top: 30px;
