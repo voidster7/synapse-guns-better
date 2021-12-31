@@ -103,7 +103,6 @@ export default {
         material.amount = item.materials[k]
         materials[k] = material
       }
-      console.log(materials)
       return materials;
     }
   },
