@@ -214,6 +214,10 @@ export default {
   );
 }
 
+.blueprint {
+  background: url("/img/blueprint.png");
+}
+
 .itemMarketprice,
 .itemPrice,
 .itemLegality {

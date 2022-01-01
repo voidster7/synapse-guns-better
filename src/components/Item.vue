@@ -17,6 +17,7 @@
     >
       {{ item.legal ? "Legal" : "Illegal" }}
     </p>
+    <p v-if="item.itemType == 'blueprint'" class="blueprintRequired">Blueprint required</p>
   </div>
 </template>
 
@@ -43,6 +44,13 @@ export default {
 };
 </script>
 <style scoped>
+.blueprintRequired {
+  color: red;
+  font-size: 1vw;
+  top: 0.2vw;
+  position: absolute;
+  right: 0.4vw;
+}
 #openItemMats {
   font-size: 3vw;
   position: absolute;
