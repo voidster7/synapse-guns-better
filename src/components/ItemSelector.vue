@@ -19,7 +19,7 @@
           @contextmenu="rightClick($event, item)"><item :item="item"></item>
         </div>
         <div v-if="shouldShowItemMats(itemKey)" class="itemMats">
-          <div class="itemDiv" v-for="(material, materialKey) in getItemMaterials(itemKey)" :key="materialKey" style="margin-left:0.2vw;">
+          <div class="itemDiv dropdownDiv" v-for="(material, materialKey) in getItemMaterials(itemKey)" :key="materialKey">
             <img
               v-bind:class="[material.itemType, 'itemImg']"
               v-bind:src="material.image"
@@ -144,6 +144,10 @@ export default {
 </script>
 
 <style scoped>
+.dropdownDiv {
+  margin-left: 1.7vw;
+  width: 20vw;
+}
 .itemMatButton {
   position: absolute;
   top: 3.5vw;
