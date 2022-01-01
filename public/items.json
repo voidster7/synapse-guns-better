@@ -476,6 +476,20 @@
             "STEEL_BAR": 14
         }
     },
+    "famas": {
+        "name": "Famas",
+        "image": "img/weapon_cw_famas.png",
+        "legal": false,
+        "marketprice": 0,
+        "itemType": "blueprint",
+        "materials": {
+            "SILVER_BAR": 8,
+            "TITANIUM_BAR": 2,
+            "IRON_BAR": 12,
+            "RIFLE_PART": 1,
+            "STEEL_BAR": 10
+        }
+    },
     "hardened_drill": {
         "name": "Hardened Drill",
         "image": "img/dheists_drill_hardened.png",
