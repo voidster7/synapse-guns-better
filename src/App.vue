@@ -108,9 +108,26 @@ export default {
   display: flex;
   justify-content: center;
 }
+::-webkit-scrollbar {
+  width: 1vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(102, 102, 102);
+  border-radius: 0.15vw;
+}
+::-webkit-scrollbar-track {
+  background-color: rgb(51, 51, 51);
+}
 .itemContainer {
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
+  height: 80vh;
+  /* height: 10vw; */
+  display: flex;
+  flex-direction: column;
+  padding-right: 0.3vw;
 }
 .itemMarketprice,
 .itemIllegal,
