@@ -277,23 +277,15 @@ export default {
   font-size: 2vw;
 }
 #ItemCalculator {
-  margin-left: 30px;
-  margin-top: 30px;
+  margin-left: 1.5vw;
+  margin-top: 1.5vw;
   width: 23vw;
 }
 
 #TotalItems {
-  margin-left: 30px;
-  margin-top: 30px;
+  margin-left: 1.5vw;
+  margin-top: 1.5vw;
   width: 23vw;
 }
 
-.stepDiv {
-  display: flex;
-  align-items: center;
-  margin-top: 5px;
-  width: 100%;
-  min-height: 6vw;
-  background: #333;
-}
 </style>

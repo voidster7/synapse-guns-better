@@ -69,7 +69,7 @@ export default {
 .itemDiv {
   display: flex;
   align-items: center;
-  margin-top: 5px;
+  margin-top: 0.25vw;
   width: 100%;
   height: 6vw;
   background: #333;

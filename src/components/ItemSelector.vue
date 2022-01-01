@@ -163,8 +163,8 @@ export default {
   position: relative;
 }
 #ItemSelector {
-  margin-left: 30px;
-  margin-top: 30px;
+  margin-left: 1.5vw;
+  margin-top: 1.5vw;
   width: 23vw;
 }
 
@@ -172,7 +172,7 @@ export default {
   display: block;
   width: 23vw;
   height: 2vw;
-  border: 4px solid #333;
+  border: 0.3vw solid #333;
   background-color: #222;
   color: white;
   font-size: 1vw;
@@ -181,7 +181,7 @@ export default {
   transition-duration: 333ms;
 }
 #search:focus {
-  border: 4px solid rgb(83, 83, 83);
+  border: 0.3vw solid rgb(83, 83, 83);
   border-radius: 0.3vw;
 }
 #search::placeholder {

@@ -82,7 +82,7 @@ export default {
   background-color: rgb(71, 71, 71);
   z-index: 10;
   border-radius: 0.2vw;
-  box-shadow: black 5px 5px 10px;
+  box-shadow: black 0.3vw 0.3vw 0.3vw;
 }
 
 #menu > h1 {
