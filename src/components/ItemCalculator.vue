@@ -39,55 +39,65 @@
   <div id="TotalItems">
     <h1 class="sectionHeader">Total Item Costs</h1>
     <div class="itemContainer">
-      <div v-for="item in completed" :key="item.name" class="itemDiv">
-        <img
-          v-bind:class="[item.itemType, 'itemImg']"
-          v-bind:src="item.image"
-          alt="Not Found"
-          onerror='this.src = "img/undefined.png"'
-          style="transform: scaleX(1)"
-        />
-        <div class="itemInfo">
-          <p class="itemName">
-            {{ item.amount }} {{ item.name }}{{ item.amount > 1 ? "s" : "" }}
-          </p>
-          <p
-            class="itemAmount"
-            v-if="
-              item.stacksize > 1 && Math.floor(item.amount / item.stacksize) > 0
-            "
-          >
-            {{ Math.floor(item.amount / item.stacksize) }} Stack{{
-              Math.floor(item.amount / item.stacksize) != 1 ? "s" : ""
-            }}
-            {{
-              item.amount % item.stacksize > 0
-                ? `and ${item.amount % item.stacksize}`
-                : ""
-            }}
-            {{ item.name
-            }}{{ item.amount > 1 && item.name.slice(-1) != "s" ? "s" : "" }}
-          </p>
-          <p class="itemPrice">{{ getFormattedETAPrice(item) }}</p>
-          <p class="itemStacksize" v-if="item.stacksize > 1">
-            Stack size of {{ item.stacksize }}
-          </p>
+      <transition-group
+        name="staggered-fade"
+        tag="div"
+        :css="false"
+        @before-enter="beforeEnter"
+        @enter="enter"
+        @leave="leave"
+      >
+        <div v-for="item in completed" :key="item.name" class="itemDiv">
+          <img
+            v-bind:class="[item.itemType, 'itemImg']"
+            v-bind:src="item.image"
+            alt="Not Found"
+            onerror='this.src = "img/undefined.png"'
+            style="transform: scaleX(1)"
+          />
+          <div class="itemInfo">
+            <p class="itemName">
+              {{ item.amount }} {{ item.name }}{{ item.amount > 1 ? "s" : "" }}
+            </p>
+            <p
+              class="itemAmount"
+              v-if="
+                item.stacksize > 1 &&
+                Math.floor(item.amount / item.stacksize) > 0
+              "
+            >
+              {{ Math.floor(item.amount / item.stacksize) }} Stack{{
+                Math.floor(item.amount / item.stacksize) != 1 ? "s" : ""
+              }}
+              {{
+                item.amount % item.stacksize > 0
+                  ? `and ${item.amount % item.stacksize}`
+                  : ""
+              }}
+              {{ item.name
+              }}{{ item.amount > 1 && item.name.slice(-1) != "s" ? "s" : "" }}
+            </p>
+            <p class="itemPrice">{{ getFormattedETAPrice(item) }}</p>
+            <p class="itemStacksize" v-if="item.stacksize > 1">
+              Stack size of {{ item.stacksize }}
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="itemDiv" v-if="getRawTotalETAPrice > 0">
-        <img
-          v-bind:class="['itemImg', 'greenItem']"
-          src="img/dollar.png"
-          alt="Not Found"
-          onerror='this.src = "img/undefined.png"'
-          style="transform: scaleX(1)"
-        />
-        <div class="itemInfo">
-          <p class="itemName">
-            Estimated price based on materials is {{ getTotalETAPrice }}
-          </p>
+        <div class="itemDiv" v-if="getRawTotalETAPrice > 0">
+          <img
+            v-bind:class="['itemImg', 'greenItem']"
+            src="img/dollar.png"
+            alt="Not Found"
+            onerror='this.src = "img/undefined.png"'
+            style="transform: scaleX(1)"
+          />
+          <div class="itemInfo">
+            <p class="itemName">
+              Estimated price based on materials is {{ getTotalETAPrice }}
+            </p>
+          </div>
         </div>
-      </div>
+      </transition-group>
     </div>
   </div>
 </template>
