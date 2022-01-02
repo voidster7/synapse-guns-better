@@ -154,6 +154,8 @@ export default {
             } else {
               complete[material.identifier] = material;
             }
+          } else if(material.materials) {
+            shouldRecurse = true;
           }
         } else {
           if (material.materials) {
