@@ -41,7 +41,7 @@
           <p class="itemName">
             {{ item.amount }} {{ item.name }}{{ item.amount > 1 ? "s" : "" }}
           </p>
-          <p class="itemAmount" v-if="item.stacksize > 1">
+          <p class="itemAmount" v-if="item.stacksize > 1 && Math.floor(item.amount / item.stacksize) > 0">
             {{ Math.floor(item.amount / item.stacksize) }} Stack{{
               Math.floor(item.amount / item.stacksize) != 1 ? "s" : ""
             }}
