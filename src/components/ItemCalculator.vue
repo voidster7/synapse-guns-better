@@ -2,27 +2,37 @@
   <div id="ItemCalculator">
     <h1 class="sectionHeader">Items to craft</h1>
     <div class="itemContainer">
-      <div
-        v-for="item in getItemsToCraft"
-        :key="item.name"
-        class="itemDiv"
-        @click="removeItemFromCraft(item.identifier)"
-        @contextmenu="rightClick($event, item)"
+      <transition-group
+        name="staggered-fade"
+        tag="div"
+        :css="false"
+        @before-enter="beforeEnter"
+        @enter="enter"
+        @leave="leave"
       >
-        <img
-          v-bind:class="[item.itemType, 'itemImg']"
-          v-bind:src="item.image"
-          alt="Not Found"
-          onerror='this.src = "img/undefined.png"'
-          style="transform: scaleX(1)"
-        />
-        <div class="itemInfo">
-          <p class="itemName">
-            {{item.amount}} {{ item.name }}{{ item.name.slice(-1) != "s" ? "s" : "" }}
-          </p>
-          <p class="itemPrice">{{ getFormattedMarketprice(item) }}</p>
+        <div
+          v-for="item in getItemsToCraft"
+          :key="item.name"
+          class="itemDiv"
+          @click="removeItemFromCraft(item.identifier)"
+          @contextmenu="rightClick($event, item)"
+        >
+          <img
+            v-bind:class="[item.itemType, 'itemImg']"
+            v-bind:src="item.image"
+            alt="Not Found"
+            onerror='this.src = "img/undefined.png"'
+            style="transform: scaleX(1)"
+          />
+          <div class="itemInfo">
+            <p class="itemName">
+              {{ item.amount }} {{ item.name
+              }}{{ item.amount > 1 && item.name.slice(-1) != "s" ? "s" : "" }}
+            </p>
+            <p class="itemPrice">{{ getFormattedMarketprice(item) }}</p>
+          </div>
         </div>
-      </div>
+      </transition-group>
     </div>
     {{ getTotalMaterials }}
   </div>
@@ -41,7 +51,12 @@
           <p class="itemName">
             {{ item.amount }} {{ item.name }}{{ item.amount > 1 ? "s" : "" }}
           </p>
-          <p class="itemAmount" v-if="item.stacksize > 1 && Math.floor(item.amount / item.stacksize) > 0">
+          <p
+            class="itemAmount"
+            v-if="
+              item.stacksize > 1 && Math.floor(item.amount / item.stacksize) > 0
+            "
+          >
             {{ Math.floor(item.amount / item.stacksize) }} Stack{{
               Math.floor(item.amount / item.stacksize) != 1 ? "s" : ""
             }}
@@ -50,7 +65,8 @@
                 ? `and ${item.amount % item.stacksize}`
                 : ""
             }}
-            {{ item.name }}{{ item.amount > 1 && item.name.slice(-1) != "s" ? "s" : "" }}
+            {{ item.name
+            }}{{ item.amount > 1 && item.name.slice(-1) != "s" ? "s" : "" }}
           </p>
           <p class="itemPrice">{{ getFormattedETAPrice(item) }}</p>
           <p class="itemStacksize" v-if="item.stacksize > 1">
@@ -78,7 +94,10 @@
 
 
 <script>
+// let ogHeight;
+// let ogFontSize;
 import Swal from "sweetalert2";
+import gsap from "gsap";
 export default {
   name: "ItemCalculator",
   components: {},
@@ -154,7 +173,7 @@ export default {
             } else {
               complete[material.identifier] = material;
             }
-          } else if(material.materials) {
+          } else if (material.materials) {
             shouldRecurse = true;
           }
         } else {
@@ -204,6 +223,25 @@ export default {
     removeItemFromCraft(item, amount) {
       if (!amount) amount = -1;
       this.$store.commit("changeItemAmount", { item: item, amount: amount });
+    },
+
+    // ANIMATIONS
+    beforeEnter(el) {
+      el.style.opacity = 0;
+    },
+    enter(el, done) {
+      gsap.to(el, {
+        opacity: 1,
+        duration: 0.2,
+        onComplete: done,
+      });
+    },
+    leave(el, done) {
+      gsap.to(el, {
+        opacity: 0,
+        duration: 0.2,
+        onComplete: done,
+      });
     },
   },
   props: {},
