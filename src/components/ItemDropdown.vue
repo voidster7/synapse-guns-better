@@ -53,26 +53,19 @@ export default {
   methods: {
     beforeEnter(el) {
       el.style.opacity = 0;
-      el.style.height = 0;
-      el.style.position = "relative";
-      el.style.top = "-5vw";
       el.style.zIndex = "-1";
     },
     enter(el, done) {
       gsap.to(el, {
         opacity: 1,
-        height: "5vw",
-        top: "0vw",
-        delay: el.dataset.index * 0.15,
+        delay: Array.prototype.slice.call(el.parentElement.children).indexOf(el) * 0.05,
         onComplete: done,
       });
     },
     leave(el, done) {
       gsap.to(el, {
         opacity: 0,
-        height: 0,
-        top: "-5vw",
-        delay: el.dataset.index * 0.15,
+        delay: Array.prototype.slice.call(el.parentElement.children).reverse().indexOf(el) * 0.05,
         onComplete: done,
       });
     },
