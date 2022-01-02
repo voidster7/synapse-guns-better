@@ -88,7 +88,7 @@ export default {
       let answer = await Swal.fire({
         title: "How many items would you like to remove?",
         input: "range",
-        inputValue: 1,
+        inputValue: item.amount,
         inputLabel: "Item Amount",
         icon: "question",
         inputAttributes: {
