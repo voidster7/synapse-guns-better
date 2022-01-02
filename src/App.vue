@@ -8,7 +8,9 @@
     allow="autoplay; encrypted-media"
   ></iframe>
   <NavBar siteName="MonoGuns Revamped"></NavBar>
-  <Menu v-if="isMenuOpen"></Menu>
+  <transition name="fade">
+    <Menu v-show="isMenuOpen"></Menu>
+  </transition>
   <div id="parent">
     <ItemSelector></ItemSelector>
     <ItemCalculator></ItemCalculator>
@@ -66,6 +68,15 @@ export default {
 </script>
 
 <style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
 .itemDiv {
   display: flex;
   align-items: center;
