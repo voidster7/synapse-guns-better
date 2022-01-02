@@ -147,13 +147,23 @@ export default {
       for (let mat in stepMaterials) {
         // loop through all the materials of the step
         let material = stepMaterials[mat];
-        if (material.materials) {
-          shouldRecurse = true;
+        if (this.$store.getters.getOption("processedMats")) {
+          if (material.type == "orebar" || material.type == "plank") {
+            if (complete[material.identifier]) {
+              complete[material.identifier].amount += material.amount;
+            } else {
+              complete[material.identifier] = material;
+            }
+          }
         } else {
-          if (complete[material.identifier]) {
-            complete[material.identifier].amount += material.amount;
+          if (material.materials) {
+            shouldRecurse = true;
           } else {
-            complete[material.identifier] = material;
+            if (complete[material.identifier]) {
+              complete[material.identifier].amount += material.amount;
+            } else {
+              complete[material.identifier] = material;
+            }
           }
         }
       }
@@ -287,5 +297,4 @@ export default {
   margin-top: 1.5vw;
   width: 23vw;
 }
-
 </style>

@@ -123,7 +123,7 @@
     "WOOD_PLANK": {
         "name": "Wood Plank",
         "image": "img/plank_wood.png",
-        "type": "item",
+        "type": "plank",
         "materials": {
             "WOOD_LOG": 4
         }
@@ -131,7 +131,7 @@
     "MAPLE_PLANK": {
         "name": "Maple Plank",
         "image": "img/plank_maple.png",
-        "type": "item",
+        "type": "plank",
         "materials": {
             "MAPLE_LOG": 4
         }
@@ -139,7 +139,7 @@
     "BIRCH_PLANK": {
         "name": "Wood Plank",
         "image": "img/plank_birch.png",
-        "type": "item",
+        "type": "plank",
         "materials": {
             "BIRCH_LOG": 4
         }
@@ -147,7 +147,7 @@
     "WILLOW_PLANK": {
         "name": "Wood Plank",
         "image": "img/plank_willow.png",
-        "type": "item",
+        "type": "plank",
         "materials": {
             "WILLOW_LOG": 4
         }

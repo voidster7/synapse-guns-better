@@ -14,6 +14,11 @@ export default createStore({
         name: "Footer visible",
         id: "footer",
         default: true
+      },
+      {
+        name: "Show processed materials instead of raw materials",
+        id: "processedMats",
+        default: false
       }
     ],
     materials: {},
