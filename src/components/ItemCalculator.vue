@@ -50,7 +50,7 @@
                 ? `and ${item.amount % item.stacksize}`
                 : ""
             }}
-            {{ item.name }}{{ item.amount > 1 ? "s" : "" }}
+            {{ item.name }}{{ item.amount > 1 && item.name.slice(-1) != "s" ? "s" : "" }}
           </p>
           <p class="itemPrice">{{ getFormattedETAPrice(item) }}</p>
           <p class="itemStacksize" v-if="item.stacksize > 1">
