@@ -100,20 +100,12 @@ export default {
     enter(el, done) {
       gsap.to(el, {
         opacity: 1,
-        delay:
-          Array.prototype.slice.call(el.parentElement.children).indexOf(el) *
-          0.05,
         onComplete: done,
       });
     },
     leave(el, done) {
       gsap.to(el, {
         opacity: 0,
-        delay:
-          Array.prototype.slice
-            .call(el.parentElement.children)
-            .reverse()
-            .indexOf(el) * 0.05,
         onComplete: done,
       });
     },
