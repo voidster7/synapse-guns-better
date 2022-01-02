@@ -18,7 +18,7 @@
         />
         <div class="itemInfo">
           <p class="itemName">
-            {{ item.amount }} {{ item.name }}{{ item.amount > 1 ? "s" : "" }}
+            {{item.amount}} {{ item.name }}{{ item.name.slice(-1) != "s" ? "s" : "" }}
           </p>
           <p class="itemPrice">{{ getFormattedMarketprice(item) }}</p>
         </div>
