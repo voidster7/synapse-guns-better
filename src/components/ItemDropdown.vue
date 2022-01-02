@@ -76,5 +76,6 @@ export default {
 .dropdownDiv {
   margin-left: 1.7vw;
   width: 20vw;
+  height: 5vw;
 }
 </style>
