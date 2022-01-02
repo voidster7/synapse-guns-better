@@ -3,6 +3,7 @@
         "name": "Copper Bar",
         "image": "img/mat_metal.png",
         "type": "orebar",
+        "price": 100,
         "materials": {
             "COPPER_ORE": 2
         }
@@ -11,6 +12,7 @@
         "name": "Iron Bar",
         "image": "img/mat_metal_iron.png",
         "type": "orebar",
+        "price": 100,
         "materials": {
             "IRON_ORE": 2
         }
@@ -19,6 +21,7 @@
         "name": "Steel Bar",
         "image": "img/mat_metal_steel.png",
         "type": "barbar",
+        "price": 100,
         "materials": {
             "IRON_BAR": 2
         }
@@ -27,6 +30,7 @@
         "name": "Silver Bar",
         "image": "img/mat_metal_silver.png",
         "type": "barbar",
+        "price": 100,
         "materials": {
             "SILVER_ORE": 2
         }
@@ -35,6 +39,7 @@
         "name": "Gold Bar",
         "image": "img/mat_metal_gold.png",
         "type": "barbar",
+        "price": 100,
         "materials": {
             "GOLD_ORE": 2
         }
@@ -43,6 +48,7 @@
         "name": "Titanium Bar",
         "image": "img/mat_metal_titanium.png",
         "type": "barbar",
+        "price": 100,
         "materials": {
             "TITANIUM_ORE": 2
         }
