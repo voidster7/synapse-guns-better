@@ -29,7 +29,7 @@
     "SILVER_BAR": {
         "name": "Silver Bar",
         "image": "img/mat_metal_silver.png",
-        "type": "barbar",
+        "type": "orebar",
         "price": 100,
         "materials": {
             "SILVER_ORE": 2
@@ -38,7 +38,7 @@
     "GOLD_BAR": {
         "name": "Gold Bar",
         "image": "img/mat_metal_gold.png",
-        "type": "barbar",
+        "type": "orebar",
         "price": 100,
         "materials": {
             "GOLD_ORE": 2
@@ -47,7 +47,7 @@
     "TITANIUM_BAR": {
         "name": "Titanium Bar",
         "image": "img/mat_metal_titanium.png",
-        "type": "barbar",
+        "type": "orebar",
         "price": 100,
         "materials": {
             "TITANIUM_ORE": 2
@@ -101,14 +101,15 @@
         "type": "item",
         "itemType": "craftingItem",
         "stacksize": 200,
-        "price": 12
+        "price": 20
     },
     "MAPLE_LOG": {
         "name": "Maple Log",
         "image": "img/mat_maple.png",
         "type": "item",
         "stacksize": 200,
-        "itemType": "craftingItem"
+        "itemType": "craftingItem",
+        "price": 37.5
     },
     "BIRCH_LOG": {
         "name": "Birch Log",
@@ -131,6 +132,7 @@
         "image": "img/plank_wood.png",
         "type": "plank",
         "stacksize": 200,
+        "price": 80,
         "materials": {
             "WOOD_LOG": 4
         }
@@ -140,6 +142,7 @@
         "image": "img/plank_maple.png",
         "type": "plank",
         "stacksize": 200,
+        "price": 150,
         "materials": {
             "MAPLE_LOG": 4
         }
@@ -149,6 +152,7 @@
         "image": "img/plank_birch.png",
         "type": "plank",
         "stacksize": 200,
+        "price": 160,
         "materials": {
             "BIRCH_LOG": 4
         }
@@ -158,6 +162,7 @@
         "image": "img/plank_willow.png",
         "type": "plank",
         "stacksize": 200,
+        "price": 348,
         "materials": {
             "WILLOW_LOG": 4
         }
