@@ -18,8 +18,8 @@
           @click="addItemToCraft(itemKey)"
           @contextmenu="rightClick($event, item)"><item :item="item"></item>
         </div>
-        <div v-if="shouldShowItemMats(itemKey)" class="itemMats">
-          <ItemDropdown :itemKey="itemKey"></ItemDropdown>
+        <div class="itemMats">
+          <ItemDropdown :itemKey="itemKey" :shouldDisplay="shouldShowItemMats(itemKey)"></ItemDropdown>
         </div>
         <i class="fas fa-caret-square-down itemMatButton"
         :class="['fas', 'itemMatButton', shouldShowItemMats(itemKey) ? 'fa-caret-square-up' : 'fa-caret-square-down']"
