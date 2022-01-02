@@ -41,9 +41,17 @@ export default {
   computed: {
     materials() {
       let materials = {};
-      let item = this.$store.getters.getItem(this.itemKey);
+      let Titem = this.$store.getters.getItem(this.itemKey);
+      let item = {};
+      for (let k in Titem) {
+        item[k] = Titem[k];
+      }
       for (let k in item.materials) {
-        let material = this.$store.getters.getItem(k);
+        let Tmaterial = this.$store.getters.getItem(k);
+        let material = {};
+        for (let k in Tmaterial) {
+          material[k] = Tmaterial[k];
+        }
         material.amount = item.materials[k];
         materials[k] = material;
       }
@@ -58,14 +66,20 @@ export default {
     enter(el, done) {
       gsap.to(el, {
         opacity: 1,
-        delay: Array.prototype.slice.call(el.parentElement.children).indexOf(el) * 0.05,
+        delay:
+          Array.prototype.slice.call(el.parentElement.children).indexOf(el) *
+          0.05,
         onComplete: done,
       });
     },
     leave(el, done) {
       gsap.to(el, {
         opacity: 0,
-        delay: Array.prototype.slice.call(el.parentElement.children).reverse().indexOf(el) * 0.05,
+        delay:
+          Array.prototype.slice
+            .call(el.parentElement.children)
+            .reverse()
+            .indexOf(el) * 0.05,
         onComplete: done,
       });
     },
