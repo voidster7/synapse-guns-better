@@ -130,6 +130,7 @@
         "name": "Wood Plank",
         "image": "img/plank_wood.png",
         "type": "plank",
+        "stacksize": 200,
         "materials": {
             "WOOD_LOG": 4
         }
@@ -138,6 +139,7 @@
         "name": "Maple Plank",
         "image": "img/plank_maple.png",
         "type": "plank",
+        "stacksize": 200,
         "materials": {
             "MAPLE_LOG": 4
         }
@@ -146,6 +148,7 @@
         "name": "Wood Plank",
         "image": "img/plank_birch.png",
         "type": "plank",
+        "stacksize": 200,
         "materials": {
             "BIRCH_LOG": 4
         }
@@ -154,6 +157,7 @@
         "name": "Wood Plank",
         "image": "img/plank_willow.png",
         "type": "plank",
+        "stacksize": 200,
         "materials": {
             "WILLOW_LOG": 4
         }
