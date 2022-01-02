@@ -19,20 +19,7 @@
           @contextmenu="rightClick($event, item)"><item :item="item"></item>
         </div>
         <div v-if="shouldShowItemMats(itemKey)" class="itemMats">
-          <div class="itemDiv dropdownDiv" v-for="(material, materialKey) in getItemMaterials(itemKey)" :key="materialKey">
-            <img
-              v-bind:class="[material.itemType, 'itemImg']"
-              v-bind:src="material.image"
-              alt="Not Found"
-              onerror='this.src = "img/undefined.png"'
-              style="transform: scaleX(1)"
-            />
-            <div class="itemInfo">
-              <p class="itemName">
-                {{ material.amount }} {{ material.name }}{{ material.amount > 1 ? "s" : "" }}
-              </p>
-            </div>
-          </div>
+          <ItemDropdown :itemKey="itemKey"></ItemDropdown>
         </div>
         <i class="fas fa-caret-square-down itemMatButton"
         :class="['fas', 'itemMatButton', shouldShowItemMats(itemKey) ? 'fa-caret-square-up' : 'fa-caret-square-down']"
@@ -46,12 +33,14 @@
 
 <script>
 import Item from "./Item.vue";
+import ItemDropdown from "./ItemDropdown.vue";
 import Swal from "sweetalert2";
 
 export default {
   name: "ItemSelector",
   components: {
     Item,
+    ItemDropdown
   },
   methods: {
     async rightClick(event, item) {
@@ -94,16 +83,6 @@ export default {
       } else {
         this.itemMatsShown[itemKey] = true;
       }
-    },
-    getItemMaterials(itemKey) {
-      let materials = {};
-      let item = this.$store.getters.getItem(itemKey)
-      for (let k in item.materials) {
-        let material = this.$store.getters.getItem(k)
-        material.amount = item.materials[k]
-        materials[k] = material
-      }
-      return materials;
     }
   },
   props: {},
@@ -144,10 +123,7 @@ export default {
 </script>
 
 <style scoped>
-.dropdownDiv {
-  margin-left: 1.7vw;
-  width: 20vw;
-}
+
 .itemMatButton {
   position: absolute;
   top: 3.5vw;
