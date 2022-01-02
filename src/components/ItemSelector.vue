@@ -9,23 +9,32 @@
       />
     </div>
     <div class="itemContainer">
-      <div
-        v-for="(item, itemKey) in filteredItems"
-        :key="item.name"
-        class="item">
+       <transition-group
+        name="staggered-fade"
+        tag="div"
+        :css="false"
+        @before-enter="beforeEnter"
+        @enter="enter"
+        @leave="leave"
+      >
+        <div
+          v-for="(item, itemKey) in filteredItems"
+          :key="item.name"
+          class="item">
 
-        <div class="itemDiv"
-          @click="addItemToCraft(itemKey)"
-          @contextmenu="rightClick($event, item)"><item :item="item"></item>
+          <div class="itemDiv"
+            @click="addItemToCraft(itemKey)"
+            @contextmenu="rightClick($event, item)"><item :item="item"></item>
+          </div>
+          <div class="itemMats">
+            <ItemDropdown :itemKey="itemKey" :shouldDisplay="shouldShowItemMats(itemKey)"></ItemDropdown>
+          </div>
+          <i class="fas fa-caret-square-down itemMatButton"
+          :class="['fas', 'itemMatButton', shouldShowItemMats(itemKey) ? 'fa-caret-square-up' : 'fa-caret-square-down']"
+            @click="toggleItemMats(itemKey)">
+          </i>
         </div>
-        <div class="itemMats">
-          <ItemDropdown :itemKey="itemKey" :shouldDisplay="shouldShowItemMats(itemKey)"></ItemDropdown>
-        </div>
-        <i class="fas fa-caret-square-down itemMatButton"
-        :class="['fas', 'itemMatButton', shouldShowItemMats(itemKey) ? 'fa-caret-square-up' : 'fa-caret-square-down']"
-          @click="toggleItemMats(itemKey)">
-        </i>
-      </div>
+      </transition-group>
     </div>
   </div>
 </template>
@@ -35,12 +44,12 @@
 import Item from "./Item.vue";
 import ItemDropdown from "./ItemDropdown.vue";
 import Swal from "sweetalert2";
-
+import gsap from "gsap";
 export default {
   name: "ItemSelector",
   components: {
     Item,
-    ItemDropdown
+    ItemDropdown,
   },
   methods: {
     async rightClick(event, item) {
@@ -83,7 +92,31 @@ export default {
       } else {
         this.itemMatsShown[itemKey] = true;
       }
-    }
+    },
+    // ANIMATIONS
+    beforeEnter(el) {
+      el.style.opacity = 0;
+    },
+    enter(el, done) {
+      gsap.to(el, {
+        opacity: 1,
+        delay:
+          Array.prototype.slice.call(el.parentElement.children).indexOf(el) *
+          0.05,
+        onComplete: done,
+      });
+    },
+    leave(el, done) {
+      gsap.to(el, {
+        opacity: 0,
+        delay:
+          Array.prototype.slice
+            .call(el.parentElement.children)
+            .reverse()
+            .indexOf(el) * 0.05,
+        onComplete: done,
+      });
+    },
   },
   props: {},
   data() {
@@ -123,7 +156,6 @@ export default {
 </script>
 
 <style scoped>
-
 .itemMatButton {
   position: absolute;
   top: 3.5vw;
