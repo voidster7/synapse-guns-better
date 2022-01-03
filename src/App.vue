@@ -11,6 +11,8 @@
   <transition name="fade">
     <Menu v-show="isMenuOpen"></Menu>
   </transition>
+  <div class="menuClickaway" v-if="isMenuOpen" @click="this.$store.state.menuOpen = false" style="width: 100vw; height: 100vh; position: fixed; z-index: 2;">
+  </div>
   <div id="parent">
     <ItemSelector></ItemSelector>
     <ItemCalculator></ItemCalculator>
