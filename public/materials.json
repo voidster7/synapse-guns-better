@@ -12,7 +12,7 @@
         "name": "Iron Bar",
         "image": "img/mat_metal_iron.png",
         "type": "orebar",
-        "price": 100,
+        "price": 150,
         "materials": {
             "IRON_ORE": 2
         }
@@ -21,7 +21,7 @@
         "name": "Steel Bar",
         "image": "img/mat_metal_steel.png",
         "type": "barbar",
-        "price": 100,
+        "price": 350,
         "materials": {
             "IRON_BAR": 2
         }
@@ -30,7 +30,7 @@
         "name": "Silver Bar",
         "image": "img/mat_metal_silver.png",
         "type": "orebar",
-        "price": 100,
+        "price": 200,
         "materials": {
             "SILVER_ORE": 2
         }
@@ -39,7 +39,7 @@
         "name": "Gold Bar",
         "image": "img/mat_metal_gold.png",
         "type": "orebar",
-        "price": 100,
+        "price": 200,
         "materials": {
             "GOLD_ORE": 2
         }
@@ -48,7 +48,7 @@
         "name": "Titanium Bar",
         "image": "img/mat_metal_titanium.png",
         "type": "orebar",
-        "price": 100,
+        "price": 300,
         "materials": {
             "TITANIUM_ORE": 2
         }
@@ -58,14 +58,14 @@
         "image": "img/mat_copper.png",
         "type": "ore",
         "stacksize": 64,
-        "price": 50
+        "price": 20
     },
     "IRON_ORE": {
         "name": "Iron Ore",
         "image": "img/mat_iron.png",
         "type": "ore",
         "stacksize": 64,
-        "price": 50
+        "price": 30
     },
     "SILVER_ORE": {
         "name": "Silver Ore",
@@ -86,7 +86,7 @@
         "image": "img/mat_titanium.png",
         "type": "ore",
         "stacksize": 64,
-        "price": 50
+        "price": 100
     },
     "HYDROXYNIL_BENZILATE": {
         "name": "6-Hydroxyinl Benzilate",
