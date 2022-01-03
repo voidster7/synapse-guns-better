@@ -16,7 +16,6 @@
     <ItemCalculator></ItemCalculator>
   </div>
   <footer v-if="shouldFooterBeVisible">
-    <p>Website is in early development.</p>
     <p style="text-align: center">#addtheflatbed</p>
     <p class="smallText" style="text-align: center">
       Don't wanna see this? Turn it off in the settings
