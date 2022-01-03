@@ -54,6 +54,9 @@ export default {
       this.$store.commit("setMaterials", materials.data);
     },
   },
+  created() {
+    this.fetchItems();
+  },
   computed: {
     isMenuOpen() {
       return this.$store.state.menuOpen;
