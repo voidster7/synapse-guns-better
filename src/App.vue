@@ -45,7 +45,7 @@ export default {
     Menu,
   },
   methods: {
-    async fetchItems() {
+    async loadSettings() {
       let options = JSON.parse(localStorage.getItem("options")) || {};
       for (let i in options) {
         this.$store.commit("setOption", {
@@ -53,9 +53,11 @@ export default {
           value: options[i],
         });
       }
+    },
+    async fetchItems() {
       let materials;
       let items;
-      if (options["materialsInsteadOfItems"]) {
+      if (await this.$store.getters.getOption("materialsInsteadOfItems")) {
         items = await axios.get("./materials.json");
         materials = await axios.get("./items.json");
       } else {
@@ -68,9 +70,10 @@ export default {
     },
   },
   created() {
+    this.loadSettings();
     this.fetchItems();
     let konamiProgress = 0;
-    document.addEventListener("keyup", (ev) => {
+    document.addEventListener("keyup", async (ev) => {
       if (!ev.code) return;
       if (
         !ev.code.startsWith("Arrow") &&
@@ -104,10 +107,15 @@ export default {
       }
       if (konamiProgress == 10) {
         konamiProgress = 69420;
-        this.$store.state.optionsObj.push({
+        await this.$store.state.optionsObj.push({
           name: "Show materials instead of items in the itemSelector.",
           id: "materialsInsteadOfItems",
           default: false,
+          onChange: () => {
+            setTimeout(() => {
+              this.fetchItems();
+            }, 250);
+          },
         });
         swal.fire(
           "Woah, a smart one!",
