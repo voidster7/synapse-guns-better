@@ -30,14 +30,22 @@ export default {
 
   computed: {
     getFormattedMarketprice() {
-      if (this.item.marketprice == 0) {
+      let Titem = this.item;
+      let item = {}
+      for(let i in Titem){
+        item[i] = Titem[i]
+      }
+      if (!item.marketprice && item.price) {
+        item.marketprice = item.price;
+      }
+      if (item.marketprice == 0 || isNaN(item.marketprice)) {
         return "Unknown Value";
       } else {
         return new Intl.NumberFormat("en-US", {
           style: "currency",
           currency: "USD",
           maximumFractionDigits: 0,
-        }).format(this.item.marketprice);
+        }).format(item.marketprice);
       }
     },
   },

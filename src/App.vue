@@ -11,8 +11,12 @@
   <transition name="fade">
     <Menu v-show="isMenuOpen"></Menu>
   </transition>
-  <div class="menuClickaway" v-if="isMenuOpen" @click="this.$store.state.menuOpen = false" style="width: 100vw; height: 100vh; position: fixed; z-index: 2;">
-  </div>
+  <div
+    class="menuClickaway"
+    v-if="isMenuOpen"
+    @click="this.$store.state.menuOpen = false"
+    style="width: 100vw; height: 100vh; position: fixed; z-index: 2"
+  ></div>
   <div id="parent">
     <ItemSelector></ItemSelector>
     <ItemCalculator></ItemCalculator>
@@ -31,6 +35,7 @@ import ItemSelector from "./components/ItemSelector.vue";
 import ItemCalculator from "./components/ItemCalculator.vue";
 import axios from "axios";
 import Menu from "./components/Menu.vue";
+import swal from "sweetalert2";
 export default {
   name: "App",
   components: {
@@ -48,14 +53,69 @@ export default {
           value: options[i],
         });
       }
-      let items = await axios.get("./items.json");
-      let materials = await axios.get("./materials.json");
+      let materials;
+      let items;
+      if (options["secret"]) {
+        items = await axios.get("./materials.json");
+        materials = await axios.get("./items.json");
+      } else {
+        items = await axios.get("./items.json");
+        materials = await axios.get("./materials.json");
+      }
+
       this.$store.commit("setItems", items.data);
       this.$store.commit("setMaterials", materials.data);
     },
   },
   created() {
     this.fetchItems();
+    let konamiProgress = 0;
+    document.addEventListener("keyup", (ev) => {
+      if (!ev.code) return;
+      if (
+        !ev.code.startsWith("Arrow") &&
+        ev.code != "KeyA" &&
+        ev.code != "KeyB"
+      )
+        return;
+      if (ev.code == "ArrowUp" && konamiProgress < 2) {
+        konamiProgress++;
+      }
+      if (ev.code == "ArrowDown" && konamiProgress >= 2 && konamiProgress < 4) {
+        konamiProgress++;
+      }
+      if (
+        ev.code == "ArrowLeft" &&
+        (konamiProgress == 4 || konamiProgress == 6)
+      ) {
+        konamiProgress++;
+      }
+      if (
+        ev.code == "ArrowRight" &&
+        (konamiProgress == 5 || konamiProgress == 7)
+      ) {
+        konamiProgress++;
+      }
+      if (ev.code == "KeyB" && konamiProgress == 8) {
+        konamiProgress++;
+      }
+      if (ev.code == "KeyA" && konamiProgress == 9) {
+        konamiProgress++;
+      }
+      if (konamiProgress == 10) {
+        konamiProgress = 69420;
+        this.$store.state.optionsObj.push({
+          name: "Ooo a secret setting",
+          id: "secret",
+          default: false,
+        });
+        swal.fire(
+          "Woah, a smart one!",
+          "You have unlocked a secret setting!",
+          "success"
+        );
+      }
+    });
   },
   computed: {
     isMenuOpen() {
