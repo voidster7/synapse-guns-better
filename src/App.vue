@@ -55,7 +55,7 @@ export default {
       }
       let materials;
       let items;
-      if (options["secret"]) {
+      if (options["materialsInsteadOfItems"]) {
         items = await axios.get("./materials.json");
         materials = await axios.get("./items.json");
       } else {
@@ -105,8 +105,8 @@ export default {
       if (konamiProgress == 10) {
         konamiProgress = 69420;
         this.$store.state.optionsObj.push({
-          name: "Ooo a secret setting",
-          id: "secret",
+          name: "Show materials instead of items in the itemSelector.",
+          id: "materialsInsteadOfItems",
           default: false,
         });
         swal.fire(
