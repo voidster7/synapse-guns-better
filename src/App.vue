@@ -57,7 +57,7 @@ export default {
     async fetchItems() {
       let materials;
       let items;
-      if (await this.$store.getters.getOption("materialsInsteadOfItems")) {
+      if (this.$store.getters.getOption("materialsInsteadOfItems")) {
         items = await axios.get("./materials.json");
         materials = await axios.get("./items.json");
       } else {
@@ -107,7 +107,7 @@ export default {
       }
       if (konamiProgress == 10) {
         konamiProgress = 69420;
-        await this.$store.state.optionsObj.push({
+        this.$store.state.optionsObj.push({
           name: "Show materials instead of items in the itemSelector.",
           id: "materialsInsteadOfItems",
           default: false,
