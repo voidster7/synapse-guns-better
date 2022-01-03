@@ -129,6 +129,9 @@ export default {
           itemList[k].image = "img/undefined.png";
         }
         itemList[k].identifier = k;
+        if (itemList[k].legal == undefined) {
+          itemList[k].legal = true;
+        }
       }
       if (search) {
         let itemsFound = {};
