@@ -49,6 +49,11 @@ export default createStore({
     setOption(state, payload) {
       let option = payload.option;
       let value = payload.value;
+      for(let i in state.optionsObj) {
+        if (state.optionsObj[i].id == option && state.optionsObj[i].onChange) {
+          state.optionsObj[i].onChange(value);
+        }
+      }
       let options = JSON.parse(localStorage.getItem("options")) || {}
       options[option] = value;
       state.options = options;
