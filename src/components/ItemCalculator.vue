@@ -381,7 +381,7 @@ export default {
 <style scoped>
 .itemMatButton {
   position: absolute;
-  top: 3.5vw;
+  top: 2.5vw;
   right: 0.8vw;
   font-size: 2vw;
   cursor: pointer;
