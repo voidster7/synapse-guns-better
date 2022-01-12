@@ -89,10 +89,12 @@
             <ItemDropdown
               :itemKey="item.identifier"
               :shouldDisplay="shouldShowItemMats(item.identifier)"
+              :itemMultiplier="item.amount"
             ></ItemDropdown>
           </div>
           <i
             class="fas fa-caret-square-down itemMatButton"
+            v-show="item.materials"
             :class="[
               'fas',
               'itemMatButton',
