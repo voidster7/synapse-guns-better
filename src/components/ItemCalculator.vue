@@ -212,7 +212,7 @@ export default {
         // loop through all the materials of the step
         let material = stepMaterials[mat];
         if (this.$store.getters.getOption("processedMats")) {
-          if (material.type == "orebar" || material.type == "plank" || !material.materials) {
+          if (material.type == "orebar" || material.type == "plank" || material.type == "item") {
             if (complete[material.identifier]) {
               complete[material.identifier].amount += material.amount;
             } else {
