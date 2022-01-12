@@ -22,8 +22,8 @@
       />
       <div class="itemInfo">
         <p class="itemName">
-          {{ material.amount }} {{ material.name
-          }}{{ material.amount > 1 ? "s" : "" }}
+          {{ (itemMultiplier || 1) * material.amount }} {{ material.name
+          }}{{ (itemMultiplier || 1) * material.amount > 1 ? "s" : "" }}
         </p>
       </div>
     </div>
@@ -37,6 +37,7 @@ export default {
   props: {
     itemKey: String,
     shouldDisplay: Boolean,
+    itemMultiplier: Number
   },
   computed: {
     materials() {
