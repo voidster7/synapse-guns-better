@@ -490,6 +490,21 @@
             "STEEL_BAR": 10
         }
     },
+    "hkmp7": {
+        "name": "HK MP7A1",
+        "image": "img/weapon_cw_mp7.png",
+        "legal": false,
+        "marketprice": 0,
+        "itemType": "blueprint",
+        "materials": {
+            "SILVER_BAR": 8,
+            "TITANIUM_BAR": 3,
+            "IRON_BAR": 10,
+            "PISTOL_PART": 1,
+            "GOLD_BAR": 5,
+            "STEEL_BAR": 7
+        }
+    },
     "silverballer": {
         "name": "Silverballer",
         "image": "img/weapon_cw_silverballer.png",
