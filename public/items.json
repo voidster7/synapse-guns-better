@@ -490,6 +490,36 @@
             "STEEL_BAR": 10
         }
     },
+    "silverballer": {
+        "name": "Silverballer",
+        "image": "img/undefined.png",
+        "legal": false,
+        "marketprice": 0,
+        "itemType": "blueprint",
+        "materials": {
+            "MAPLE_PLANK": 1,
+            "PISTOL_PART": 1,
+            "COPPER_BAR": 7,
+            "IRON_BAR": 10,
+            "GOLD_BAR": 2,
+            "STEEL_BAR": 5
+        }
+    },
+    "tac338": {
+        "name": "Tac .338",
+        "image": "img/undefined.png",
+        "legal": false,
+        "marketprice": 0,
+        "itemType": "blueprint",
+        "materials": {
+            "SILVER_BAR": 14,
+            "TITANIUM_BAR": 5,
+            "SNIPER_PART": 1,
+            "IRON_BAR": 12,
+            "GOLD_BAR": 4,
+            "STEEL_BAR": 10
+        }
+    },
     "hardened_drill": {
         "name": "Hardened Drill",
         "image": "img/dheists_drill_hardened.png",
