@@ -492,7 +492,7 @@
     },
     "silverballer": {
         "name": "Silverballer",
-        "image": "img/undefined.png",
+        "image": "img/weapon_cw_silverballer.png",
         "legal": false,
         "marketprice": 0,
         "itemType": "blueprint",
@@ -507,7 +507,7 @@
     },
     "tac338": {
         "name": "Tac .338",
-        "image": "img/undefined.png",
+        "image": "img/weapon_cw_tac338.png",
         "legal": false,
         "marketprice": 0,
         "itemType": "blueprint",
