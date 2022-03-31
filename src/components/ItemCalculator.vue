@@ -200,6 +200,20 @@ export default {
           for (let test in Tmaterial) {
             material[test] = Tmaterial[test];
           }
+          if (material.name.includes("Plank")) {
+            console.log(material);
+          }
+          if (this.$store.getters.getOption("processedMats")) {
+            if (material.type == "orebar" || material.type == "plank" || material.type == "item") {
+              material.amount = materialAmount;
+              if (complete[material.identifier]) {
+                complete[material.identifier].amount += material.amount;
+              } else {
+                complete[material.identifier] = material;
+              }
+              continue;
+            }
+          }
           if (!stepMaterials[materialName]) {
             // check if the material has already been added to the total, and if not add it
             material.amount = materialAmount;
@@ -214,7 +228,11 @@ export default {
         // loop through all the materials of the step
         let material = stepMaterials[mat];
         if (this.$store.getters.getOption("processedMats")) {
-          if (material.type == "orebar" || material.type == "plank" || material.type == "item") {
+          if (
+            material.type == "orebar" ||
+            material.type == "plank" ||
+            material.type == "item"
+          ) {
             if (complete[material.identifier]) {
               complete[material.identifier].amount += material.amount;
             } else {

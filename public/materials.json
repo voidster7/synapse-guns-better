@@ -148,7 +148,7 @@
         }
     },
     "BIRCH_PLANK": {
-        "name": "Wood Plank",
+        "name": "Birch Plank",
         "image": "img/plank_birch.png",
         "type": "plank",
         "stacksize": 200,
@@ -158,7 +158,7 @@
         }
     },
     "WILLOW_PLANK": {
-        "name": "Wood Plank",
+        "name": "Willow Plank",
         "image": "img/plank_willow.png",
         "type": "plank",
         "stacksize": 200,
