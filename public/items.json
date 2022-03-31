@@ -490,6 +490,19 @@
             "STEEL_BAR": 10
         }
     },
+    "mp40": {
+        "name": "MP40",
+        "image": "img/weapon_cw_mp40.png",
+        "legal": false,
+        "marketprice": 0,
+        "itemType": "blueprint",
+        "materials": {
+            "COPPER_BAR": 14,
+            "PISTOL_PART": 1,
+            "IRON_BAR": 16,
+            "STEEL_BAR": 3
+        }
+    },
     "hkmp7": {
         "name": "HK MP7A1",
         "image": "img/weapon_cw_mp7.png",
