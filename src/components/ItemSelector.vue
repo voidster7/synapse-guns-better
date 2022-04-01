@@ -145,14 +145,20 @@ export default {
     },
     shouldDisplay(item) {
       var search = this.searchInput.toLowerCase();
+      if (!this.categoriesShown[item.category]) {
+        return false;
+      }
       return item.name.toLowerCase().indexOf(search.toLowerCase()) > -1;
     },
     shouldDisplayCategory(category) {
-      console.log(category);
-      return true;
+      return this.categoriesShown[category];
     },
     toggleCategory(category) {
-      console.log(category);
+      if (this.categoriesShown[category]) {
+        delete this.categoriesShown[category];
+      } else {
+        this.categoriesShown[category] = true;
+      }
     },
   },
   props: {},
@@ -160,6 +166,7 @@ export default {
     return {
       searchInput: "",
       itemMatsShown: {},
+      categoriesShown: {"Pistol": true, "SMG": true, "Assault Rifle": true, "Sniper": true, "Shotgun": true},
     };
   },
   computed: {
