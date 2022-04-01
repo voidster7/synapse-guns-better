@@ -5,6 +5,7 @@
         "legal": true,
         "marketprice": 500,
         "itemType": "pistol",
+        "category": "Pistol",
         "materials": {
             "COPPER_BAR": 8,
             "IRON_BAR": 5,
@@ -17,6 +18,7 @@
         "legal": true,
         "marketprice": 800,
         "itemType": "pistol",
+        "category": "Pistol",
         "materials": {
             "COPPER_BAR": 9,
             "IRON_BAR": 6,
@@ -29,6 +31,7 @@
         "legal": true,
         "marketprice": 800,
         "itemType": "pistol",
+        "category": "Pistol",
         "materials": {
             "COPPER_BAR": 8,
             "IRON_BAR": 8,
@@ -41,6 +44,7 @@
         "legal": true,
         "marketprice": 800,
         "itemType": "pistol",
+        "category": "Pistol",
         "materials": {
             "COPPER_BAR": 7,
             "PISTOL_PART": 1,
@@ -54,6 +58,7 @@
         "legal": true,
         "marketprice": 3500,
         "itemType": "pistol",
+        "category": "Pistol",
         "materials": {
             "COPPER_BAR": 8,
             "PISTOL_PART": 1,
@@ -67,6 +72,7 @@
         "legal": false,
         "marketprice": 3500,
         "itemType": "assaultrifle",
+        "category": "SMG",
         "materials": {
             "COPPER_BAR": 9,
             "IRON_BAR": 10,
@@ -79,6 +85,7 @@
         "legal": false,
         "marketprice": 3500,
         "itemType": "assaultrifle",
+        "category": "SMG",
         "materials": {
             "COPPER_BAR": 10,
             "PISTOL_PART": 1,
@@ -92,6 +99,7 @@
         "legal": true,
         "marketprice": 3500,
         "itemType": "melee",
+        "category": "Misc",
         "materials": {
             "COPPER_BAR": 8,
             "IRON_BAR": 5
@@ -103,6 +111,7 @@
         "legal": false,
         "marketprice": 3500,
         "itemType": "assaultrifle",
+        "category": "SMG",
         "materials": {
             "COPPER_BAR": 14,
             "IRON_BAR": 16,
@@ -115,6 +124,7 @@
         "legal": false,
         "marketprice": 9000,
         "itemType": "pistol",
+        "category": "Pistol",
         "materials": {
             "COPPER_BAR": 8,
             "PISTOL_PART": 1,
@@ -128,6 +138,7 @@
         "legal": false,
         "marketprice": 6000,
         "itemType": "assaultrifle",
+        "category": "Assault Rifle",
         "materials": {
             "COPPER_BAR": 11,
             "DAMAGED_RIFLE_PART": 1,
@@ -141,6 +152,7 @@
         "legal": true,
         "marketprice": 6500,
         "itemType": "assaultrifle",
+        "category": "Assault Rifle",
         "materials": {
             "COPPER_BAR": 11,
             "DAMAGED_RIFLE_PART": 1,
@@ -154,6 +166,7 @@
         "legal": false,
         "marketprice": 6500,
         "itemType": "assaultrifle",
+        "category": "SMG",
         "materials": {
             "COPPER_BAR": 15,
             "PISTOL_PART": 1,
@@ -167,6 +180,7 @@
         "legal": true,
         "marketprice": 6500,
         "itemType": "pistol",
+        "category": "Pistol",
         "materials": {
             "SILVER_BAR": 1,
             "PISTOL_PART": 1,
@@ -182,6 +196,7 @@
         "legal": false,
         "marketprice": 10000,
         "itemType": "assaultrifle",
+        "category": "SMG",
         "materials": {
             "SILVER_BAR": 6,
             "IRON_BAR": 12,
@@ -196,6 +211,7 @@
         "legal": true,
         "marketprice": 6500,
         "itemType": "pistol",
+        "category": "Pistol",
         "materials": {
             "PISTOL_PART": 1,
             "COPPER_BAR": 8,
@@ -210,6 +226,7 @@
         "legal": false,
         "marketprice": 10000,
         "itemType": "assaultrifle",
+        "category": "Assault Rifle",
         "materials": {
             "COPPER_BAR": 11,
             "DAMAGED_RIFLE_PART": 1,
@@ -223,6 +240,7 @@
         "legal": false,
         "marketprice": 11500,
         "itemType": "assaultrifle",
+        "category": "Assault Rifle",
         "materials": {
             "SILVER_BAR": 5,
             "COPPER_BAR": 12,
@@ -237,6 +255,7 @@
         "legal": false,
         "marketprice": 11000,
         "itemType": "shotgun",
+        "category": "Assault Rifle",
         "materials": {
             "SILVER_BAR": 7,
             "SHOTGUN_PART": 1,
@@ -250,6 +269,7 @@
         "legal": false,
         "marketprice": 12000,
         "itemType": "assaultrifle",
+        "category": "Assault Rifle",
         "materials": {
             "SILVER_BAR": 4,
             "COPPER_BAR": 11,
@@ -264,6 +284,7 @@
         "legal": false,
         "marketprice": 15000,
         "itemType": "assaultrifle",
+        "category": "Assault Rifle",
         "materials": {
             "IRON_BAR": 12,
             "RIFLE_PART": 1,
@@ -277,6 +298,7 @@
         "legal": false,
         "marketprice": 11000,
         "itemType": "assaultrifle",
+        "category": "SMG",
         "materials": {
             "SILVER_BAR": 7,
             "TITANIUM_BAR": 2,
@@ -292,6 +314,7 @@
         "legal": false,
         "marketprice": 16000,
         "itemType": "assaultrifle",
+        "category": "Assault Rifle",
         "materials": {
             "IRON_BAR": 10,
             "COPPER_BAR": 9,
@@ -306,6 +329,7 @@
         "legal": false,
         "marketprice": 12500,
         "itemType": "assaultrifle",
+        "category": "Assault Rifle",
         "materials": {
             "COPPER_BAR": 11,
             "RIFLE_PART": 1,
@@ -319,6 +343,7 @@
         "legal": false,
         "marketprice": 16000,
         "itemType": "assaultrifle",
+        "category": "Assault Rifle",
         "materials": {
             "TITANIUM_BAR": 1,
             "IRON_BAR": 11,
@@ -334,6 +359,7 @@
         "legal": false,
         "marketprice": 21500,
         "itemType": "assaultrifle",
+        "category": "Sniper",
         "materials": {
             "SILVER_BAR": 19,
             "SNIPER_PART": 1,
@@ -348,6 +374,7 @@
         "legal": false,
         "marketprice": 22000,
         "itemType": "assaultrifle",
+        "category": "Sniper",
         "materials": {
             "SILVER_BAR": 17,
             "TITANIUM_BAR": 5,
@@ -363,6 +390,7 @@
         "legal": false,
         "marketprice": 12000,
         "itemType": "shotgun",
+        "category": "Shotgun",
         "materials": {
             "SILVER_BAR": 7,
             "IRON_BAR": 15,
@@ -377,6 +405,7 @@
         "legal": false,
         "marketprice": 16000,
         "itemType": "assaultrifle",
+        "category": "Assault Rifle",
         "materials": {
             "SILVER_BAR": 8,
             "TITANIUM_BAR": 1,
@@ -393,6 +422,7 @@
         "legal": false,
         "marketprice": 14000,
         "itemType": "assaultrifle",
+        "category": "Assault Rifle",
         "materials": {
             "SILVER_BAR": 8,
             "TITANIUM_BAR": 1,
@@ -407,6 +437,7 @@
         "legal": false,
         "marketprice": 17000,
         "itemType": "assaultrifle",
+        "category": "Assault Rifle",
         "materials": {
             "TITANIUM_BAR": 2,
             "IRON_BAR": 13,
@@ -422,6 +453,7 @@
         "legal": false,
         "marketprice": 0,
         "itemType": "exotic",
+        "category": "Misc",
         "materials": {
             "COPPER_BAR": 10,
             "HYDROXYNIL_BENZILATE": 1,
@@ -435,6 +467,7 @@
         "legal": false,
         "marketprice": 18000,
         "itemType": "shotgun",
+        "category": "Shotgun",
         "materials": {
             "SILVER_BAR": 7,
             "TITANIUM_BAR": 5,
@@ -450,6 +483,7 @@
         "legal": false,
         "marketprice": 22000,
         "itemType": "assaultrifle",
+        "category": "Assault Rifle",
         "materials": {
             "SILVER_BAR": 8,
             "TITANIUM_BAR": 4,
@@ -466,6 +500,7 @@
         "legal": false,
         "marketprice": 24000,
         "itemType": "assaultrifle",
+        "category": "Assault Rifle",
         "materials": {
             "SILVER_BAR": 20,
             "TITANIUM_BAR": 7,
@@ -482,6 +517,7 @@
         "legal": false,
         "marketprice": 0,
         "itemType": "blueprint",
+        "category": "SMG",
         "materials": {
             "SILVER_BAR": 8,
             "TITANIUM_BAR": 2,
@@ -496,6 +532,7 @@
         "legal": false,
         "marketprice": 0,
         "itemType": "blueprint",
+        "category": "SMG",
         "materials": {
             "COPPER_BAR": 14,
             "PISTOL_PART": 1,
@@ -509,6 +546,7 @@
         "legal": false,
         "marketprice": 0,
         "itemType": "blueprint",
+        "category": "SMG",
         "materials": {
             "SILVER_BAR": 8,
             "TITANIUM_BAR": 3,
@@ -524,6 +562,7 @@
         "legal": false,
         "marketprice": 0,
         "itemType": "blueprint",
+        "category": "Pistol",
         "materials": {
             "MAPLE_PLANK": 1,
             "PISTOL_PART": 1,
@@ -539,6 +578,7 @@
         "legal": false,
         "marketprice": 0,
         "itemType": "blueprint",
+        "category": "Sniper",
         "materials": {
             "SILVER_BAR": 14,
             "TITANIUM_BAR": 5,
@@ -554,6 +594,7 @@
         "legal": false,
         "marketprice": 30000,
         "itemType": "craftingItem",
+        "category": "Misc",
         "materials": {
             "SILVER_BAR": 5,
             "DIAMOND": 1,
@@ -568,6 +609,7 @@
         "legal": false,
         "marketprice": 0,
         "itemType": "craftingItem",
+        "category": "Misc",
         "materials": {
             "COPPER_BAR": 6,
             "IRON_BAR": 8,
@@ -581,6 +623,7 @@
         "legal": true,
         "marketprice": 2000,
         "itemType": "craftingItem",
+        "category": "Misc",
         "materials": {
             "COPPER_BAR": 4,
             "IRON_BAR": 4,
@@ -593,6 +636,7 @@
         "legal": true,
         "marketprice": 3000,
         "itemType": "craftingItem",
+        "category": "Misc",
         "materials": {
             "COPPER_BAR": 4,
             "IRON_BAR": 4,
@@ -605,6 +649,7 @@
         "legal": true,
         "marketprice": 258,
         "itemType": "craftingItem",
+        "category": "Ammo",
         "materials": {
             "COPPER_BAR": 3
         }
@@ -615,6 +660,7 @@
         "legal": true,
         "marketprice": 332,
         "itemType": "craftingItem",
+        "category": "Ammo",
         "materials": {
             "IRON_BAR": 3
         }
@@ -625,6 +671,7 @@
         "legal": true,
         "marketprice": 1209,
         "itemType": "craftingItem",
+        "category": "Ammo",
         "materials": {
             "IRON_BAR": 3
         }
@@ -635,6 +682,7 @@
         "legal": true,
         "marketprice": 975,
         "itemType": "craftingItem",
+        "category": "Ammo",
         "materials": {
             "IRON_BAR": 3,
             "COPPER_BAR": 3
@@ -646,6 +694,7 @@
         "legal": true,
         "marketprice": 0,
         "itemType": "craftingItem",
+        "category": "Ammo",
         "materials": {
             "GOLD_BAR": 5,
             "STEEL_BAR": 30
