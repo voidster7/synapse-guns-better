@@ -304,7 +304,8 @@ export default {
 }
 
 .blueprint {
-  background: url("/img/blueprint.png");
+  background: url("/img/blueprint.png") no-repeat center center fixed;
+  background-size: 100% 100%;
 }
 
 .itemMarketprice,
