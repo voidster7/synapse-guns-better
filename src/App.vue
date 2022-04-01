@@ -57,6 +57,7 @@ export default {
     async fetchItems() {
       let materials;
       let items;
+      let categories = {};
       if (this.$store.getters.getOption("materialsInsteadOfItems")) {
         items = await axios.get("./materials.json");
         materials = await axios.get("./items.json");
@@ -64,9 +65,14 @@ export default {
         items = await axios.get("./items.json");
         materials = await axios.get("./materials.json");
       }
-
+      for (let i in items.data) {
+        let item = items.data[i];
+        if (!categories[item.category]) categories[item.category] = {};
+        categories[item.category][i] = item;
+      }
       this.$store.commit("setItems", items.data);
       this.$store.commit("setMaterials", materials.data);
+      this.$store.commit("setCategories", categories);
     },
   },
   created() {

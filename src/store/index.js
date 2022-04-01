@@ -22,6 +22,7 @@ export default createStore({
       }
     ],
     materials: {},
+    categories: {},
     itemsToCraft: {},
     steps: [],
     complete: {},
@@ -45,6 +46,10 @@ export default createStore({
     setItems(state, payload) {
       let items = payload;
       state.items = items;
+    },
+    setCategories(state, payload) {
+      let categories = payload;
+      state.categories = categories;
     },
     setOption(state, payload) {
       let option = payload.option;

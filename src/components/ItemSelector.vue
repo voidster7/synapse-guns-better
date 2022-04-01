@@ -9,7 +9,7 @@
       />
     </div>
     <div class="itemContainer">
-       <transition-group
+      <transition-group
         name="staggered-fade"
         tag="div"
         :css="false"
@@ -18,21 +18,40 @@
         @leave="leave"
       >
         <div
-          v-for="(item, itemKey) in filteredItems"
-          :key="item.name"
-          class="item">
-
-          <div class="itemDiv"
-            @click="addItemToCraft(itemKey)"
-            @contextmenu="rightClick($event, item)"><item :item="item"></item>
+          class="category"
+          v-for="(items, category) in categories"
+          :key="category"
+        >
+          <h1>{{ category }}</h1>
+          <div v-for="(item, itemKey) in items" :key="item.name" class="item">
+            <div v-if="shouldDisplay(item)">
+              <div
+                class="itemDiv"
+                @click="addItemToCraft(itemKey)"
+                @contextmenu="rightClick($event, item)"
+              >
+                <item :item="item"></item>
+              </div>
+              <div class="itemMats">
+                <ItemDropdown
+                  :itemKey="itemKey"
+                  :shouldDisplay="shouldShowItemMats(itemKey)"
+                ></ItemDropdown>
+              </div>
+              <i
+                class="fas fa-caret-square-down itemMatButton"
+                :class="[
+                  'fas',
+                  'itemMatButton',
+                  shouldShowItemMats(itemKey)
+                    ? 'fa-caret-square-up'
+                    : 'fa-caret-square-down',
+                ]"
+                @click="toggleItemMats(itemKey)"
+              >
+              </i>
+            </div>
           </div>
-          <div class="itemMats">
-            <ItemDropdown :itemKey="itemKey" :shouldDisplay="shouldShowItemMats(itemKey)"></ItemDropdown>
-          </div>
-          <i class="fas fa-caret-square-down itemMatButton"
-          :class="['fas', 'itemMatButton', shouldShowItemMats(itemKey) ? 'fa-caret-square-up' : 'fa-caret-square-down']"
-            @click="toggleItemMats(itemKey)">
-          </i>
         </div>
       </transition-group>
     </div>
@@ -109,6 +128,10 @@ export default {
         onComplete: done,
       });
     },
+    shouldDisplay(item) {
+      var search = this.searchInput.toLowerCase();
+      return item.name.toLowerCase().indexOf(search.toLowerCase()) > -1;
+    },
   },
   props: {},
   data() {
@@ -120,6 +143,9 @@ export default {
   computed: {
     getItemsToCraft() {
       return this.$store.state.itemsToCraft;
+    },
+    categories() {
+      return this.$store.state.categories;
     },
     filteredItems() {
       var search = this.searchInput.toLowerCase();
