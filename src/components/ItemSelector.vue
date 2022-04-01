@@ -166,7 +166,7 @@ export default {
     return {
       searchInput: "",
       itemMatsShown: {},
-      categoriesShown: {"Pistol": true, "SMG": true, "Assault Rifle": true, "Sniper": true, "Shotgun": true},
+      categoriesShown: {},
     };
   },
   computed: {
