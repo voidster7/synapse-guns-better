@@ -255,7 +255,7 @@
         "legal": false,
         "marketprice": 11000,
         "itemType": "shotgun",
-        "category": "Assault Rifle",
+        "category": "Shotgun",
         "materials": {
             "SILVER_BAR": 7,
             "SHOTGUN_PART": 1,
