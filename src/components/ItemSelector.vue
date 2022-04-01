@@ -22,7 +22,22 @@
           v-for="(items, category) in categories"
           :key="category"
         >
-          <h1>{{ category }}</h1>
+          <div class="catCompontents">
+            <i
+              class="fas fa-caret-square-down toggleCategoryButton"
+              :class="[
+                'fas',
+                'toggleCategoryButton',
+                shouldDisplayCategory(category)
+                  ? 'fa-caret-square-up'
+                  : 'fa-caret-square-down',
+              ]"
+              @click="toggleCategory(category)"
+            >
+            </i>
+            <h1>{{ category }}</h1>
+          </div>
+
           <div v-for="(item, itemKey) in items" :key="item.name" class="item">
             <div v-if="shouldDisplay(item)">
               <div
@@ -132,6 +147,13 @@ export default {
       var search = this.searchInput.toLowerCase();
       return item.name.toLowerCase().indexOf(search.toLowerCase()) > -1;
     },
+    shouldDisplayCategory(category) {
+      console.log(category);
+      return true;
+    },
+    toggleCategory(category) {
+      console.log(category);
+    },
   },
   props: {},
   data() {
@@ -185,9 +207,26 @@ export default {
   cursor: pointer;
   transition-duration: 200ms;
 }
-.itemMatButton:hover {
+.itemMatButton:hover,
+.toggleCategoryButton:hover {
   color: #ffc107;
 }
+.category {
+  position: relative;
+  margin-bottom: 2vh;
+}
+.catCompontents {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.toggleCategoryButton {
+  font-size: 2vw;
+  cursor: pointer;
+  transition-duration: 200ms;
+  margin-right: 0.5vw;
+}
+
 .item {
   position: relative;
 }
