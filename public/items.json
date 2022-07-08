@@ -673,7 +673,7 @@
         "itemType": "craftingItem",
         "category": "Ammo",
         "materials": {
-            "IRON_BAR": 3
+            "STEEL_BAR": 3
         }
     },
     "rifle_ammo": {
