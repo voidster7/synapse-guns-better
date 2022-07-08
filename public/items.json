@@ -240,7 +240,7 @@
         "legal": false,
         "marketprice": 11500,
         "itemType": "assaultrifle",
-        "category": "Assault Rifle",
+        "category": "Light Machine Gun",
         "materials": {
             "SILVER_BAR": 5,
             "COPPER_BAR": 12,
@@ -343,7 +343,7 @@
         "legal": false,
         "marketprice": 16000,
         "itemType": "assaultrifle",
-        "category": "Assault Rifle",
+        "category": "Light Machine Gun",
         "materials": {
             "TITANIUM_BAR": 1,
             "IRON_BAR": 11,
