@@ -6,14 +6,14 @@ export default createStore({
     options: {},
     optionsObj: [
       {
-        name: "Flatbed Background",
+        name: "Flatbed Background [old]",
         id: "flatbed",
-        default: true,
+        default: false,
       },
       {
-        name: "Footer visible",
+        name: "Footer visible [old]",
         id: "footer",
-        default: true
+        default: false
       },
       {
         name: "Show processed materials instead of raw materials",
@@ -90,6 +90,9 @@ export default createStore({
             val = true;
           }
         }
+      }
+      if (val == undefined) {
+        val = false;
       }
       return val;
     }
