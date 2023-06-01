@@ -22,7 +22,7 @@
         }
     },
     "sks": {
-        "name": "SKS",
+        "name": "SKSS",
         "image": "img/path.png",
         "itemType": "assaultrifle",
         "category": "SMG",
