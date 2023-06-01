@@ -2,8 +2,8 @@
     "exampleitem1": {
         "name": "exampleitem1",
         "image": "exampleitem1",
-        "itemType": "exampleitem1",
-        "category": "exampleitem1",
+        "itemType": "pistol",
+        "category": "Pistol",
         "materials": {
             "GOLD_BAR": 5,
             "STEEL_BAR": 30
@@ -12,8 +12,8 @@
     "exampleitem2": {
         "name": "exampleitem2",
         "image": "exampleitem2",
-        "itemType": "exampleitem2",
-        "category": "exampleitem2",
+        "itemType": "pistol",
+        "category": "Pistol",
         "materials": {
             "GOLD_BAR": 5,
             "STEEL_BAR": 30
