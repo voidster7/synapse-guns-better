@@ -323,8 +323,6 @@ export default {
         price += this.completed[i].price * this.completed[i].amount;
       }
       return new Intl.NumberFormat("", {
-        style: "currency",
-        currency: "USD",
         maximumFractionDigits: 0,
       }).format(price);
     },
