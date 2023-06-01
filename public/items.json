@@ -25,6 +25,19 @@
             "PISTOL_PART": 1
         }
     },
+    "p99": {
+        "name": "P99",
+        "image": "img/weapon_cw_p99.png",
+        "legal": true,
+        "marketprice": 800,
+        "itemType": "pistol",
+        "category": "Pistol",
+        "materials": {
+            "COPPER_BAR": 8,
+            "IRON_BAR": 8,
+            "PISTOL_PART": 1
+        }
+    },
     "rifle_ammo": {
         "name": "Rifle Ammo",
         "image": "img/ammo_cw_rifle.png",
