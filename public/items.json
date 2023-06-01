@@ -1,24 +1,4 @@
 {
-    "exampleitem1": {
-        "name": "exampleitem1",
-        "image": "exampleitem1",
-        "itemType": "pistol",
-        "category": "Pistol",
-        "materials": {
-            "GOLD_BAR": 5,
-            "STEEL_BAR": 30
-        }
-    },
-    "exampleitem2": {
-        "name": "exampleitem2",
-        "image": "exampleitem2",
-        "itemType": "pistol",
-        "category": "Pistol",
-        "materials": {
-            "GOLD_BAR": 5,
-            "STEEL_BAR": 30
-        }
-    },
     "glock17": {
         "name": "Glock 17",
         "image": "img/path.png",
@@ -35,6 +15,28 @@
         "image": "img/path.png",
         "itemType": "pistol",
         "category": "Pistol",
+        "materials": {
+            "COPPER_BAR": 9,
+            "IRON_BAR": 6,
+            "PISTOL_PART": 1
+        }
+    },
+    "sks": {
+        "name": "SKS",
+        "image": "img/path.png",
+        "itemType": "assaultrifle",
+        "category": "SMG",
+        "materials": {
+            "COPPER_BAR": 9,
+            "IRON_BAR": 6,
+            "PISTOL_PART": 1
+        }
+    },
+    "uzi": {
+        "name": "UZI",
+        "image": "img/path.png",
+        "itemType": "assaultrifle",
+        "category": "SMG",
         "materials": {
             "COPPER_BAR": 9,
             "IRON_BAR": 6,
