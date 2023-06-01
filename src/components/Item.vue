@@ -41,7 +41,7 @@ export default {
       if (item.marketprice == 0 || isNaN(item.marketprice)) {
         return "Unknown Value";
       } else {
-        return new Intl.NumberFormat("en-US", {
+        return new Intl.NumberFormat("", {
           style: "currency",
           currency: "USD",
           maximumFractionDigits: 0,
