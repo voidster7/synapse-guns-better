@@ -2,6 +2,8 @@
     "glock17": {
         "name": "Glock 17",
         "image": "img/path.png",
+        "legal": false,
+        "marketprice": 5,
         "itemType": "pistol",
         "category": "Pistol",
         "materials": {
@@ -13,6 +15,8 @@
     "coltm45": {
         "name": "Colt_M45",
         "image": "img/path.png",
+        "legal": false,
+        "marketprice": 5,
         "itemType": "pistol",
         "category": "Pistol",
         "materials": {
@@ -24,6 +28,8 @@
     "sks": {
         "name": "SKSS",
         "image": "img/path.png",
+        "legal": false,
+        "marketprice": 5,
         "itemType": "assaultrifle",
         "category": "SMG",
         "materials": {
@@ -35,6 +41,8 @@
     "uzi": {
         "name": "UZI",
         "image": "img/path.png",
+        "legal": false,
+        "marketprice": 5,
         "itemType": "assaultrifle",
         "category": "SMG",
         "materials": {
@@ -46,6 +54,8 @@
     "exampleitem3": {
         "name": "exampleitem3",
         "image": "exampleitem3",
+        "legal": false,
+        "marketprice": 5,
         "itemType": "exampleitem3",
         "category": "exampleitem3",
         "materials": {
