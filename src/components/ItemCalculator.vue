@@ -274,8 +274,6 @@ export default {
         return "Unknown Value";
       } else {
         return new Intl.NumberFormat("en-US", {
-          style: "currency",
-          currency: "USD",
           maximumFractionDigits: 0,
         }).format(item.marketprice * item.amount);
       }
@@ -286,8 +284,6 @@ export default {
         return "Unknown Value";
       } else {
         return new Intl.NumberFormat("en-US", {
-          style: "currency",
-          currency: "USD",
           maximumFractionDigits: 0,
         }).format(item.price * item.amount);
       }
