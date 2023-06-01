@@ -24,6 +24,7 @@
             "IRON_BAR": 6,
             "PISTOL_PART": 1
         }
+    },
     "rifle_ammo": {
         "name": "Rifle Ammo",
         "image": "img/ammo_cw_rifle.png",
