@@ -273,7 +273,9 @@ export default {
       if (item.marketprice == 0 || isNaN(item.marketprice)) {
         return "Unknown Value";
       } else {
-        return new Intl.NumberFormat("", {
+        return new Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency: "USD",
           maximumFractionDigits: 0,
         }).format(item.marketprice * item.amount);
       }
@@ -283,7 +285,9 @@ export default {
       if (item.price == 0) {
         return "Unknown Value";
       } else {
-        return new Intl.NumberFormat("", {
+        return new Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency: "USD",
           maximumFractionDigits: 0,
         }).format(item.price * item.amount);
       }
@@ -322,7 +326,9 @@ export default {
       for (let i in this.completed) {
         price += this.completed[i].price * this.completed[i].amount;
       }
-      return new Intl.NumberFormat("", {
+      return new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
         maximumFractionDigits: 0,
       }).format(price);
     },
