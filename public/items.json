@@ -1,6 +1,6 @@
 {
     "glock17": {
-        "name": "Glock 17",
+        "name": "Glock 17 (LVL TBA)",
         "image": "img/path.png",
         "legal": false,
         "itemType": "pistol",
@@ -12,7 +12,7 @@
         }
     },
     "coltm45": {
-        "name": "Colt_M45",
+        "name": "Colt_M45 (LVL TBA)",
         "image": "img/path.png",
         "legal": false,
         "itemType": "pistol",
@@ -24,7 +24,7 @@
         }
     },
     "sks": {
-        "name": "SKSS",
+        "name": "SKS (LVL TBA)",
         "image": "img/path.png",
         "legal": false,
         "itemType": "assaultrifle",
@@ -36,7 +36,7 @@
         }
     },
     "uzi": {
-        "name": "UZI",
+        "name": "UZI (LVL TBA)",
         "image": "img/path.png",
         "legal": false,
         "itemType": "assaultrifle",
