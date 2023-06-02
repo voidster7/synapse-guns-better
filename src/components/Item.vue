@@ -15,7 +15,7 @@
         { itemLegal: item.legal, itemIllegal: !item.legal },
       ]"
     >
-      {{ item.legal ? "Legal" : "Illegal" }}
+      {{ item.legal ? "Not Contraband" : "Contraband" }}
     </p>
     <p v-if="item.itemType == 'blueprint'" class="blueprintRequired">Blueprint required</p>
   </div>
