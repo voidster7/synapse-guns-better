@@ -15,7 +15,7 @@
         { itemLegal: item.legal, itemIllegal: !item.legal },
       ]"
     >
-      {{ item.legal ? "Not Contraband" : "Contraband" }}
+      {{ item.legal ? "Legal" : "Illegal" }}
     </p>
     <p v-if="item.itemType == 'blueprint'" class="blueprintRequired">Blueprint required</p>
   </div>
@@ -41,7 +41,7 @@ export default {
       if (item.marketprice == 0 || isNaN(item.marketprice)) {
         return "Unknown Value";
       } else {
-        return new Intl.NumberFormat("", {
+        return new Intl.NumberFormat("en-US", {
           style: "currency",
           currency: "USD",
           maximumFractionDigits: 0,
